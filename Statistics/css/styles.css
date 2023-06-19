@@ -1,0 +1,20 @@
+/*Body*/
+body{
+  text-align: center;
+}
+
+img{
+  width: 25%;
+}
+.row{
+  padding: 40px;
+}
+#main{
+  background-color: #00356B;
+}
+.icon-stats{
+  color: #286DC0;
+}
+.icon-title{
+  color: white;
+}

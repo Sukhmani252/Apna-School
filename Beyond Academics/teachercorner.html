@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+  <style>
+    
+    h2,h1{
+      font-family: 'Merriweather', serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: #286dc0;
+    }
+    
+    p,li{
+      font-family: 'Source Serif Pro',serif;
+    }
+
+    .container{
+      min-width: 1400px;
+    }
+    .header {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .header-image {
+      width: 100%;
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+
+    .header-content {
+      position: absolute;
+      top: 80%;
+      left: 0;
+      transform: translate(0, -80%);
+      width: 50%;
+      text-align: center;
+      z-index: 1;
+      padding: 0 10px;
+      background: linear-gradient(to right, rgba(33, 71, 109, 0.7), rgba(33, 71, 109, 0));
+    }
+
+    .header h1 {
+      font-family: "Merriweather", serif;
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fff;
+      padding: 10px 20px;
+    }
+
+    .resources-heading {
+      background: #00356b;
+      padding: 10px 10px 10px 100px;
+      font-size: 24px;
+      border-radius: 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .resources-heading h2{
+      color: #fff;
+    }
+
+    .content {
+      margin-top: 20px;
+      padding: 10px;
+    }
+
+    .development-section {
+      background: #fff;
+      padding: 20px 10px;
+     border-top: 3px solid #286dc0;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      height: 300px;
+    }
+
+    .blogs-section {
+    padding: 20px 10px;
+    background: #ffffff;
+    border-top: 3px solid #286dc0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    height: 300px;
+  }
+
+  
+
+  .blog-link {
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .line{
+    border-bottom: 1px solid #cccccc;
+  }
+
+  .blog-link:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
+  }
+
+  .blog-link h4 {
+    color: #555555;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .blog-link p {
+    color: #777777;
+    font-size: 14px;
+  }
+
+  .best-practices-section {
+      margin-top: 30px;
+      background: #fff;
+      
+    }
+    .best-practices-section h2{
+      color: #fff;
+      padding: 10px 10px 10px 100px;
+      background: #00356b;
+    }
+
+    .footer {
+      background-color: #222222;
+      color: white;
+      padding: 50px 0;
+    }
+    .footer-contact p{
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: small;
+    }
+    .footer-year p{
+      color: lightgray;
+    }
+
+    .footer-logo {
+      max-width: 250px;
+      margin-bottom: 20px;
+          margin-top: 40px;
+    }
+
+    .footer-contact {
+      margin-bottom: 50px;
+    }
+    .footer p{
+  font-family: 'Poppins', sans-serif;
+}
+
+    .footer-quick-links {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      line-height: 2;
+    }
+    .footer h4{ 
+      color: #63aaff;
+      font-family: 'Poppins', sans-serif;
+    }
+    .footer-quick-links li{
+      list-style: none;
+      margin-bottom: 5px;
+    }
+
+    .footer-quick-links li a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer-information {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      line-height: 2;
+
+    }
+
+    
+    .footer-information li {
+      list-style: none;
+      margin-bottom: 5px;
+    }
+
+    .footer-information li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-social-media {
+      margin-bottom: 20px;
+      text-align: right;
+    
+    }
+
+    .footer-social-media ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .footer-social-media ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .footer-social-media ul li a {
+      color: white;
+    }
+    
+    @media (max-width: 576px) {
+      .teachers-corner-heading {
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+      }
+
+      .resources-heading {
+        font-size: 20px;
+      }
+
+      .blogs-section h3 {
+        font-size: 20px;
+      }
+
+      .best-practices-section {
+        margin-top: 20px;
+        padding: 15px;
+      }
+
+      .container{
+        min-width: 100%;
+      }
+    
+    }
+  </style>
+  <title>Teacher's Corner</title>
+</head>
+<body>
+  <section id="header">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #00356B;">
+    <div class="container">
+    <a class="navbar-brand" href="#">
+    <img src="Apna School Final.jpg" alt="Logo" width="70" height="60" class="d-inline-block align-text-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            About Us
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">The School</a></li>
+            <li><a class="dropdown-item" href="#">Organizational Structure</a></li>
+            <li><a class="dropdown-item" href="#">Administration</a></li>
+            <li><a class="dropdown-item" href="#">Our Policies</a></li>
+            <li><a class="dropdown-item" href="#">Parent's Duty</a></li>
+            <li><a class="dropdown-item" href="#">Founder's Desk</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Facilities And Infrastructure
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Infrastructure</a></li>
+            <li><a class="dropdown-item" href="#">Transport,Safety & Security</a></li>
+            <li><a class="dropdown-item" href="#">Extra Curricular Facilities</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Admission
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Admissions</a></li>
+            <li><a class="dropdown-item" href="#">Curriculars</a></li>
+            <li><a class="dropdown-item" href="#">Faculties And Staff</a></li>
+            <li><a class="dropdown-item" href="#">Rules And Regulation</a></li>
+            <li><a class="dropdown-item" href="#">Academic Calendar</a></li>
+            <li><a class="dropdown-item" href="#">Career Guidance</a></li>
+            <li><a class="dropdown-item" href="#">Student's Corner</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Beyond Academics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Activities</a></li>
+            <li><a class="dropdown-item" href="#">Clubs & House</a></li>
+            <li><a class="dropdown-item" href="#">Past Events</a></li>
+            <li><a class="dropdown-item" href="#">Creative Corner</a></li>
+            <li><a class="dropdown-item" href="#">Teacher's Corner</a></li>
+            <li><a class="dropdown-item" href="#">Student Counselling</a></li>
+            <li><a class="dropdown-item" href="#">Social Outreach</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Media And Gallery
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Media Mentions</a></li>
+            <li><a class="dropdown-item" href="#">Gallery</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Contact Us & Feedback
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Contact Form</a></li>
+            <li><a class="dropdown-item" href="#">Discussion Forum(*)/Blog</a></li>
+            <li><a class="dropdown-item" href="#">Join Us</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Fee Payment</a>
+        </li>
+
+      </ul>
+    </div>
+    </div>
+    </nav>
+</section>
+  
+  <div class="container-fluid p-0">
+    <div class="row">
+      <div class="col-md-12 header">
+        <img src="../Images/teacher2.jpg" class="header-image" alt="Header Image">
+        <div class="header-content">
+          <h1>Teacher's Corner</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+         
+    <section class="p-5 container">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius veritatis neque doloribus repellat distinctio eveniet ducimus quidem. Eius natus alias sapiente repellat cupiditate nobis repellendus illo ducimus rem molestias necessitatibus assumenda, id, hic dolor tempora? Ducimus, ullam perferendis rem tempore et corrupti eveniet iste magnam reiciendis delectus eum. Magni tenetur soluta quam similique facilis rem tempora veniam error, tempore, dicta, dignissimos temporibus praesentium! Eos ducimus id, dolor minima unde natus reprehenderit eum nam quod reiciendis tenetur! Nostrum hic quasi quis, dolor ipsa expedita magni nam ea asperiores fuga assumenda eius cum suscipit facilis possimus quo ex? Ipsum vitae quas odio!
+      </p>
+    </section>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="resources-heading">
+          <h2>  Teaching Resources</h2>
+         
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class=" col-md-12">
+        <div class="px-5 content container">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dapibus tellus, sed consectetur nisi. Proin
+            vestibulum neque enim, id egestas sem lacinia at. Aliquam erat volutpat. Mauris id mi non purus tincidunt
+            rhoncus. Sed vel neque dui. Nam sagittis elit ut lorem facilisis, nec efficitur quam auctor.
+          </p>
+          <p>
+            Here are some helpful resources for teachers:
+          </p>
+          <ul>
+            <li>Resource 1</li>
+            <li>Resource 2</li>
+            <li>Resource 3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row container px-5">
+      <div class="px-5 col-md-8">
+        <div class="development-section px-4">
+          <h2> Professional Development</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dapibus tellus, sed consectetur nisi. Proin
+            vestibulum neque enim, id egestas sem lacinia at. Aliquam erat volutpat. Mauris id mi non purus tincidunt
+            rhoncus, egestas odio. Fusce faucibus, nisi eu accumsan consequat.
+          </p>
+          <p>
+            Explore our professional development opportunities:
+          </p>
+          <ul>
+            <li>Opportunity 1</li>
+            <li>Opportunity 2</li>
+            <li>Opportunity 3</li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="blogs-section">
+          <h2> Blogs for Teachers</h2>
+          <div class="blog-link line">
+            <h4>Blog Title 1</h4>
+            <p>Summary of the blog post</p>
+          </div>
+          <div class="blog-link line">
+            <h4>Blog Title 2</h4>
+            <p>Summary of the blog post</p>
+          </div>
+          <div class="blog-link">
+            <h4>Blog Title 3</h4>
+            <p>Summary of the blog post</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="row">
+        <div class="best-practices-section col-12">
+          <h2> Best Practices and Tips</h2>
+        </div>
+    </div>
+    <div class="row ">
+      <div class="col-md-12">
+        <div class="px-5 content container">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dapibus tellus, sed consectetur nisi. Proin vestibulum neque enim, id egestas sem lacinia at. Aliquam erat volutpat. Mauris id mi non purus tincidunt rhoncus. Sed vel neque dui. Nam sagittis elit ut lorem facilisis, nec efficitur quam auctor.
+    </p>
+    <p>
+      Here are some best practices and tips for teachers:
+    </p>
+    <ul>
+      <li>Tip 1</li>
+      <li>Tip 2</li>
+      <li>Tip 3</li>
+    </ul>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div id="map" style="height: 200px;"></div>
+      </div>
+      <div class="col-md-3">
+        <h4 class="mb-4 p-1">CONTACT US</h4>
+        <p>Address: 123 Street, City, Country</p>
+        <p>Email: info@example.com</p>
+        <p>Phone: 123-456-7890</p>
+      </div>
+      <div class="col-md-3">
+        <h4>QUICK LINKS</h4>
+        <div class="footer-quick-links">
+          <li><a href="../About Us/ourpolicies.html">Our Policies</a></li>
+          <li><a href="#">Parents Association</a></li>
+          <li><a href="#">Public Disclosure</a></li>
+          <li><a href="#">Location</a></li>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <h4>INFORMATION</h4>
+        <div class="footer-information">
+          <li><a href="#">Calendar</a></li>
+          <li><a href="#">Transfer Certificate</a></li>
+          <li><a href="#">Intranet</a></li>
+          <li><a href="#">Career Opportunity</a></li>
+        </div>
+      </div>
+    </div>
+    <div class="row border-top border-3 pt-3">
+       <div class="col-md-6">
+        <p class="footer-year">
+         Copyright &copy; <span id="year"></span> Apna School. All Rights Reserved.
+        </p>
+    </div>
+
+      <div class="col-md-6">
+        <div class="footer-social-media">
+          <ul>
+            <li><a href="#"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+            <li><a href="#"><i class="fa fab fa-twitter fa-xl"></i></a></li>
+            <li><a href="#"><i class="fa fab fa-instagram fa-xl"></i></a></li>
+            <li><a href="#"><i class="fa fab fa-linkedin fa-xl"></i></a></li>
+            <li><a href="#"><i class="fa fab fa-youtube fa-xl"></i></a></li>
+          </ul>
+        </div>
+        </div>
+        <hr>
+    </div>
+  </div>
+</footer>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
+
+<script>
+  function initMap() {
+    // Specify the coordinates of your location  
+    var myLatLng = {lat: 24.24166364346895, lng: 86.159596114646};
+
+    // Create a map object and specify the DOM element for display
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: myLatLng,
+      zoom: 12
+    });
+
+    // Create a marker and set its position
+    var marker = new google.maps.Marker({
+      map: map,
+      position: myLatLng,
+      title: 'Apna School'
+    });
+  }
+  var currentYear = new Date().getFullYear();
+    document.getElementById("year").innerHTML = currentYear;
+    
+  </script>
+</body>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>
+
+

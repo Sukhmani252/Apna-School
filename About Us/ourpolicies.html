@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>School Policies</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      font-family: 'Source Serif Pro', serif;
+      background-color: #f8f8f8;
+    }
+
+    h1, h4 {
+      font-family: 'Merriweather', serif;
+      color: #286dc0;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .custom-container {
+      max-width: 700px;
+      background-color: #fff;
+      padding: 30px 100px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .header-image {
+      width: 100%;
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+
+    .header-content {
+      position: absolute;
+      top: 80%;
+      left: 0;
+      transform: translate(0, -80%);
+      width: 50%;
+      text-align: center;
+      z-index: 1;
+      padding: 0 10px;
+      background: linear-gradient(to right, rgba(33, 71, 109, 0.7), rgba(33, 71, 109, 0));
+    }
+
+    .header h1 {
+      font-family: "Merriweather", serif;
+      font-size: 3rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #fff;
+      padding: 10px 20px;
+    }
+
+    .policy {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .policy a {
+      display: block;
+      padding: 10px 20px;
+      background-color: #286dc0;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .policy a:hover {
+      background-color: darkgray;
+    }
+
+    .footer {
+      background-color: #222222;
+      color: white;
+      padding: 50px 0;
+    }
+    .footer-contact p{
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: small;
+    }
+    .footer-year p{
+      color: lightgray;
+    }
+
+    .footer-logo {
+      max-width: 250px;
+      margin-bottom: 20px;
+          margin-top: 40px;
+    }
+
+    .footer-contact {
+      margin-bottom: 50px;
+    }
+    .footer p{
+  font-family: 'Poppins', sans-serif;
+}
+
+    .footer-quick-links {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      line-height: 2;
+    }
+    .footer h4{ 
+      color: #63aaff;
+      font-family: 'Poppins', sans-serif;
+    }
+    .footer-quick-links li{
+      list-style: none;
+      margin-bottom: 5px;
+    }
+
+    .footer-quick-links li a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer-information {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      line-height: 2;
+
+    }
+
+    
+    .footer-information li {
+      list-style: none;
+      margin-bottom: 5px;
+    }
+
+    .footer-information li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-social-media {
+      margin-bottom: 20px;
+      text-align: right;
+    
+    }
+
+    .footer-social-media ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .footer-social-media ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .footer-social-media ul li a {
+      color: white;
+    }
+    
+  </style>
+</head>
+<body>
+  <section id="header">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #00356B;">
+    <div class="container">
+    <a class="navbar-brand" href="#">
+    <img src="Apna School Final.jpg" alt="Logo" width="70" height="60" class="d-inline-block align-text-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            About Us
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">The School</a></li>
+            <li><a class="dropdown-item" href="#">Organizational Structure</a></li>
+            <li><a class="dropdown-item" href="#">Administration</a></li>
+            <li><a class="dropdown-item" href="#">Our Policies</a></li>
+            <li><a class="dropdown-item" href="#">Parent's Duty</a></li>
+            <li><a class="dropdown-item" href="#">Founder's Desk</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Facilities And Infrastructure
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Infrastructure</a></li>
+            <li><a class="dropdown-item" href="#">Transport,Safety & Security</a></li>
+            <li><a class="dropdown-item" href="#">Extra Curricular Facilities</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Admission
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Admissions</a></li>
+            <li><a class="dropdown-item" href="#">Curriculars</a></li>
+            <li><a class="dropdown-item" href="#">Faculties And Staff</a></li>
+            <li><a class="dropdown-item" href="#">Rules And Regulation</a></li>
+            <li><a class="dropdown-item" href="#">Academic Calendar</a></li>
+            <li><a class="dropdown-item" href="#">Career Guidance</a></li>
+            <li><a class="dropdown-item" href="#">Student's Corner</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Beyond Academics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Activities</a></li>
+            <li><a class="dropdown-item" href="#">Clubs & House</a></li>
+            <li><a class="dropdown-item" href="#">Past Events</a></li>
+            <li><a class="dropdown-item" href="#">Creative Corner</a></li>
+            <li><a class="dropdown-item" href="#">Teacher's Corner</a></li>
+            <li><a class="dropdown-item" href="#">Student Counselling</a></li>
+            <li><a class="dropdown-item" href="#">Social Outreach</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Media And Gallery
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Media Mentions</a></li>
+            <li><a class="dropdown-item" href="#">Gallery</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Contact Us & Feedback
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Contact Form</a></li>
+            <li><a class="dropdown-item" href="#">Discussion Forum(*)/Blog</a></li>
+            <li><a class="dropdown-item" href="#">Join Us</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Fee Payment</a>
+        </li>
+
+      </ul>
+    </div>
+    </div>
+    </nav>
+</section>
+
+  <div class="container-fluid p-0">
+    <div class="row">
+      <div class="col-md-12 header">
+        <img src="../Images/school.jpg" class="header-image" alt="Header Image">
+        <div class="header-content">
+          <h1>OUR POLICIES</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container custom-container">
+    <div class="policy">
+      <h4><a href="path/to/policy1.pdf" target="_blank">Download Policy 1 PDF</a></h4>
+    </div>
+
+    <div class="policy">
+      <h4><a href="path/to/policy2.pdf" target="_blank">Download Policy 2 PDF</a></h4>
+    </div>
+
+    <div class="policy">
+      <h4><a href="path/to/policy3.pdf" target="_blank">Download Policy 3 PDF</a></h4>
+    </div>
+
+    <div class="policy">
+      <h4><a href="path/to/policy4.pdf" target="_blank">Download Policy 4 PDF</a></h4>
+    </div>
+    <div class="policy">
+      <h4><a href="path/to/policy5.pdf" target="_blank">Download Policy 5 PDF</a></h4>
+    </div>
+
+    <div class="policy">
+      <h4><a href="path/to/policy6.pdf" target="_blank">Download Policy 6 PDF</a></h4>
+    </div>
+
+    <div class="policy">
+      <h4><a href="path/to/policy7.pdf" target="_blank">Download Policy 7 PDF</a></h4>
+    </div>
+
+    <div class="policy">
+      <h4><a href="path/to/policy8.pdf" target="_blank">Download Policy 8 PDF</a></h4>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div id="map" style="height: 200px;"></div>
+        </div>
+        <div class="col-md-3">
+          <h4 class="mb-4 p-1">CONTACT US</h4>
+          <p>Address: 123 Street, City, Country</p>
+          <p>Email: info@example.com</p>
+          <p>Phone: 123-456-7890</p>
+        </div>
+        <div class="col-md-3">
+          <h4>QUICK LINKS</h4>
+          <div class="footer-quick-links">
+            <li><a href="../About Us/ourpolicies.html">Our Policies</a></li>
+            <li><a href="#">Parents Association</a></li>
+            <li><a href="#">Public Disclosure</a></li>
+            <li><a href="#">Location</a></li>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h4>INFORMATION</h4>
+          <div class="footer-information">
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Transfer Certificate</a></li>
+            <li><a href="#">Intranet</a></li>
+            <li><a href="#">Career Opportunity</a></li>
+          </div>
+        </div>
+      </div>
+      <div class="row border-top border-3 pt-3">
+         <div class="col-md-6">
+          <p class="footer-year">
+           Copyright &copy; <span id="year"></span> Apna School. All Rights Reserved.
+          </p>
+      </div>
+
+        <div class="col-md-6">
+          <div class="footer-social-media">
+            <ul>
+              <li><a href="#"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+              <li><a href="#"><i class="fa fab fa-twitter fa-xl"></i></a></li>
+              <li><a href="#"><i class="fa fab fa-instagram fa-xl"></i></a></li>
+              <li><a href="#"><i class="fa fab fa-linkedin fa-xl"></i></a></li>
+              <li><a href="#"><i class="fa fab fa-youtube fa-xl"></i></a></li>
+            </ul>
+          </div>
+          </div>
+          <hr>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
+
+<!-- Custom JavaScript -->
+<script>
+  function initMap() {
+    // Specify the coordinates of your location  
+    var myLatLng = {lat: 24.24166364346895, lng: 86.159596114646};
+
+    // Create a map object and specify the DOM element for display
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: myLatLng,
+      zoom: 12
+    });
+
+    // Create a marker and set its position
+    var marker = new google.maps.Marker({
+      map: map,
+      position: myLatLng,
+      title: 'Apna School'
+    });
+  }
+  var currentYear = new Date().getFullYear();
+    document.getElementById("year").innerHTML = currentYear;
+    
+  </script>
+</html>
+

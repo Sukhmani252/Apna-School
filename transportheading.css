@@ -1,0 +1,14 @@
+.container {
+    position: center;
+    font-family: Arial;
+  }
+  
+  .text-block {
+    position: absolute;
+    bottom: 2px;
+    right: 320px;
+    background-color: black;
+    color: white;
+    padding-left: 70px;
+    padding-right: 70px;
+  }

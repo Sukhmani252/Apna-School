@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quote of the Day</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:italic,wght@0,700;,1,400&family=Source+Serif+Pro:wght@300;400&family=Yesteryear&display=swap" rel="stylesheet">
+  <body>
+   
+<div class="container-fluid bigbox">
+  <div class="row">
+    <div class="col-lg-7 quote text-center">
+      <h1 class="quote-heading pt-5">Quote of the Day</h1>
+      <blockquote id="quote" class="text pt-5"></blockquote>
+    </div>
+      <div class="col-lg-5 notice-board">
+        <h2 class="text-white">Notice Board</h2>
+        <div id="dynamic-notice" class="mt-4"></div>
+      </div>
+      
+  </div>
+</div>
+
+<style>
+
+
+.bigbox{
+  margin-top: 50px;
+}
+  .quote {
+    min-height: 50vh;
+    background-color: #f9f9f9;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    padding: 20px; 
+  }
+  
+  .quote h1 {
+    color: #286dc0;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+  }
+  
+  .text {
+    color: #222;
+    font-family: 'Yesteryear', cursive;
+    font-size: large;
+  }
+  
+  .notice-board {
+  background: #00356b;
+  padding: 20px;
+  height: 480px;
+  overflow-y: scroll;
+}
+
+.notice-board h2 {
+  color: #fff;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+
+.notice {
+  background-color: #fff;
+  color: #333;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-family: 'Source Serif Pro', serif;
+}
+
+.notice:last-child {
+  margin-bottom: 0;
+}
+
+.notice p {
+  margin: 0;
+}
+
+.notice-date {
+  font-size: small;
+  color: #999;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+</style>
+<script src="Quote.js"></script>
+</body>
+

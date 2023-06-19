@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Campus Tour</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+   
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styles */
+    body {
+      font-family: "Merriweather", serif;
+      color: #333;
+      background-color: #fff;
+    }
+
+    /* Hero section styles */
+    .hero-section {
+      position: relative;
+      height: 500px; 
+      overflow: hidden;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .hero-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 40px;
+      text-align: center;
+      color: #fff;
+      background-color: rgba(33, 71, 109, 0.7);
+    }
+
+    .hero-content h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+    }
+
+    /* Campus section styles */
+    .campus-section {
+      padding: 50px 0;
+    }
+
+    .campus-section h2 {
+      font-family: "Source Serif Pro", serif;
+      font-weight: 400;
+      font-size: 40px;
+      margin-bottom: 40px;
+      color: #286dc0;
+      text-align: left;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .grid-item {
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .grid-item .caption {
+      padding: 10px;
+    }
+
+    .grid-item .caption h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .grid-item .caption p {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .grid-item img{
+       width: 100%;
+    }
+
+    /* Content section styles */
+    .content-section {
+      padding: 40px 0;
+    }
+
+    .content-section h2 {
+      font-family: "Source Serif Pro", serif;
+      font-size: 40px;
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: #286dc0;
+    }
+
+    .content-section p {
+      font-size: 20px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    /* Student life section styles */
+    .student-life-section {
+      padding: 40px 0;
+    }
+
+    .student-life-section h2 {
+      font-family: "Source Serif Pro", serif;
+      font-size: 40px;
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: #286dc0;
+      text-align: left;
+    }
+
+    .student-life-section .grid-item {
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+
+    .student-life-section .grid-item .caption {
+      padding: 10px;
+      text-align: left;
+    }
+
+    .student-life-section .grid-item .caption h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .student-life-section .grid-item .caption p {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .footer {
+      background-color: #222222;
+      color: white;
+      padding: 50px 0;
+    }
+    .footer-contact p{
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: small;
+    }
+    .footer-year p{
+      color: lightgray;
+    }
+
+    .footer-logo {
+      max-width: 250px;
+      margin-bottom: 20px;
+          margin-top: 40px;
+    }
+
+    .footer-contact {
+      margin-bottom: 50px;
+    }
+    .footer p{
+  font-family: 'Poppins', sans-serif;
+}
+
+    .footer-quick-links {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      line-height: 2;
+    }
+    .footer h4{ 
+      color: #63aaff;
+      font-family: 'Poppins', sans-serif;
+    }
+    .footer-quick-links li{
+      list-style: none;
+      margin-bottom: 5px;
+    }
+
+    .footer-quick-links li a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer-information {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      line-height: 2;
+
+    }
+
+    
+    .footer-information li {
+      list-style: none;
+      margin-bottom: 5px;
+    }
+
+    .footer-information li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-social-media {
+      margin-bottom: 20px;
+      text-align: right;
+    
+    }
+
+    .footer-social-media ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .footer-social-media ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .footer-social-media ul li a {
+      color: white;
+    }
+    
+
+    @media (max-width: 767px) {
+      /* Mobile styles */
+      .container {
+        padding: 0;
+      }
+
+      .hero-content {
+        padding: 20px;
+      }
+
+      .grid-item img {
+      width: 100%;
+      }
+
+      .campus-section h2,
+      .content-section h2,
+      .student-life-section h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+      }
+
+      .grid-item .caption h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+
+      .grid-item .caption p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section id="header">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #00356B;">
+    <div class="container">
+    <a class="navbar-brand" href="#">
+    <img src="../Images/Apna School Final.jpg" alt="Logo" width="70" height="60" class="d-inline-block align-text-top p-0">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            About Us
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">The School</a></li>
+            <li><a class="dropdown-item" href="#">Organizational Structure</a></li>
+            <li><a class="dropdown-item" href="#">Administration</a></li>
+            <li><a class="dropdown-item" href="#">Our Policies</a></li>
+            <li><a class="dropdown-item" href="#">Parent's Duty</a></li>
+            <li><a class="dropdown-item" href="#">Founder's Desk</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Facilities And Infrastructure
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Infrastructure</a></li>
+            <li><a class="dropdown-item" href="#">Transport,Safety & Security</a></li>
+            <li><a class="dropdown-item" href="#">Extra Curricular Facilities</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Admission
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Admissions</a></li>
+            <li><a class="dropdown-item" href="#">Curriculars</a></li>
+            <li><a class="dropdown-item" href="#">Faculties And Staff</a></li>
+            <li><a class="dropdown-item" href="#">Rules And Regulation</a></li>
+            <li><a class="dropdown-item" href="#">Academic Calendar</a></li>
+            <li><a class="dropdown-item" href="#">Career Guidance</a></li>
+            <li><a class="dropdown-item" href="#">Student's Corner</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Beyond Academics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Activities</a></li>
+            <li><a class="dropdown-item" href="#">Clubs & House</a></li>
+            <li><a class="dropdown-item" href="#">Past Events</a></li>
+            <li><a class="dropdown-item" href="#">Creative Corner</a></li>
+            <li><a class="dropdown-item" href="#">Teacher's Corner</a></li>
+            <li><a class="dropdown-item" href="#">Student Counselling</a></li>
+            <li><a class="dropdown-item" href="#">Social Outreach</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Media And Gallery
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Media Mentions</a></li>
+            <li><a class="dropdown-item" href="#">Gallery</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Contact Us & Feedback
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Contact Form</a></li>
+            <li><a class="dropdown-item" href="#">Discussion Forum(*)/Blog</a></li>
+            <li><a class="dropdown-item" href="#">Join Us</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Fee Payment</a>
+        </li>
+
+      </ul>
+    </div>
+    </div>
+    </nav>
+</section>
+
+  <section class="hero-section">
+    <video class="hero-video" src="../video/pexels-chris-flaten-3288315-2560x1440-30fps.mp4" autoplay loop muted></video>
+    <div class="hero-content">
+      <h1>Welcome to Our Campus</h1>
+      <p>Discover the beauty and opportunities of our campus through an immersive tour.</p>
+    </div>
+  </section>
+
+  <section class="campus-section">
+    <div class="container">
+      <h2>Explore Our Campus</h2>
+      <div class="row">
+        <!-- Add campus pictures with descriptions -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="grid-item">
+            <img src="../Images/school3.jpg" alt="Campus Image 1" class="img-fluid">
+            <div class="caption">
+              <h3>Event Hall</h3>
+              <p>Experience our state-of-the-art event hall, perfect for hosting conferences and performances.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="grid-item">
+            <img src="../Images/school3.jpg" alt="Campus Image 2" class="img-fluid">
+            <div class="caption">
+              <h3>Outdoor Amphitheater</h3>
+              <p>Enjoy open-air performances and events at our beautiful outdoor amphitheater.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="grid-item">
+            <img src="../Images/school3.jpg" alt="Campus Image 3" class="img-fluid">
+            <div class="caption">
+              <h3>Library</h3>
+              <p>Discover our extensive library, providing a wide range of resources for research and study.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="grid-item">
+            <img src="../Images/school3.jpg" alt="Campus Image 4" class="img-fluid">
+            <div class="caption">
+              <h3>Sports Facilities</h3>
+              <p>Stay active and enjoy our top-notch sports facilities, including a gymnasium and outdoor fields.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>About our Campus</h2>
+      <p>We strive to provide a supportive environment where students can thrive academically and personally. Our dedicated faculty and staff are here to assist you every step of the way. Through our comprehensive programs and resources, we aim to equip our students with the knowledge, skills, and experiences necessary for success in their chosen fields.</p>
+    
+    </div>
+  </section>
+
+  <section class="student-life-section">
+    <div class="container">
+      <h2>Student Life</h2>
+      <div class="row">
+        <!-- Add student life pictures with descriptions -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="grid-item">
+            <img src="../Images/school3.jpg" alt="Student Life Image 1" class="img-fluid">
+            <div class="caption">
+              <h3>Clubs and Organizations</h3>
+              <p>Get involved in our vibrant campus community through a wide range of clubs and organizations.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="grid-item">
+            <img src="../Images/school3.jpg" alt="Student Life Image 2" class="img-fluid">
+            <div class="caption">
+              <h3>Community Service</h3>
+              <p>Make a difference in the local community by participating in various community service initiatives.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="grid-item">
+            <img src="../Images/school3.jpg" alt="Student Life Image 3" class="img-fluid">
+            <div class="caption">
+              <h3>Social Events</h3>
+              <p>Experience a lively social scene with regular events, parties, and gatherings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div id="map" style="height: 200px;"></div>
+        </div>
+        <div class="col-md-3">
+          <h4 class="mb-4 p-1">CONTACT US</h4>
+          <p>Address: 123 Street, City, Country</p>
+          <p>Email: info@example.com</p>
+          <p>Phone: 123-456-7890</p>
+        </div>
+        <div class="col-md-3">
+          <h4>QUICK LINKS</h4>
+          <div class="footer-quick-links">
+            <li><a href="../About Us/ourpolicies.html">Our Policies</a></li>
+            <li><a href="#">Parents Association</a></li>
+            <li><a href="#">Public Disclosure</a></li>
+            <li><a href="#">Location</a></li>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h4>INFORMATION</h4>
+          <div class="footer-information">
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Transfer Certificate</a></li>
+            <li><a href="#">Intranet</a></li>
+            <li><a href="#">Career Opportunity</a></li>
+          </div>
+        </div>
+      </div>
+      <div class="row border-top border-3 pt-3">
+         <div class="col-md-6">
+          <p class="footer-year">
+           Copyright &copy; <span id="year"></span> Apna School. All Rights Reserved.
+          </p>
+      </div>
+
+        <div class="col-md-6">
+          <div class="footer-social-media">
+            <ul>
+              <li><a href="#"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+              <li><a href="#"><i class="fa fab fa-twitter fa-xl"></i></a></li>
+              <li><a href="#"><i class="fa fab fa-instagram fa-xl"></i></a></li>
+              <li><a href="#"><i class="fa fab fa-linkedin fa-xl"></i></a></li>
+              <li><a href="#"><i class="fa fab fa-youtube fa-xl"></i></a></li>
+            </ul>
+          </div>
+          </div>
+          <hr>
+      </div>
+    </div>
+  </footer>
+  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
+
+<!-- Custom JavaScript -->
+<script>
+function initMap() {
+  // Specify the coordinates of your location  
+  var myLatLng = {lat: 24.24166364346895, lng: 86.159596114646};
+
+  // Create a map object and specify the DOM element for display
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: myLatLng,
+    zoom: 12
+  });
+
+  // Create a marker and set its position
+  var marker = new google.maps.Marker({
+    map: map,
+    position: myLatLng,
+    title: 'Apna School'
+  });
+}
+var currentYear = new Date().getFullYear();
+  document.getElementById("year").innerHTML = currentYear;
+  
+</script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

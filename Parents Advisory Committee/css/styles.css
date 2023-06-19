@@ -1,0 +1,186 @@
+/*Navbar*/
+
+#header{
+  margin-bottom: 40px;
+}
+
+/*Header-image*/
+.image-head{
+  width: 98%;
+}
+
+/*Main Content*/
+
+#main-content{
+  margin-top: 40px;
+}
+.list-group{
+padding-left: 250px;
+padding-right: 250px;
+line-height: 50px;
+
+}
+.main-link{
+  font-family: "Montserrat-bold";
+  font-size: 1.5rem;
+  color:  #00356B;
+}
+.Advisory{
+  padding-right: 50px;
+
+}
+.Advisory-title{
+  font-family: "Montserrat-bold";
+  color:  #00356B;
+  font-size: 3.5rem;
+
+}
+
+.Advisory-content{
+  font-family: "Montserrat-light";
+  color: #286DC0;
+  font-size: 1.2rem;
+}
+.Advisory-last{
+  font-family: "Montserrat-bold";
+  color:  #00356B;
+}
+
+.Advisory-desc{
+  font-family: "Montserrat-light";
+  color: #286DC0;
+}
+
+/*footer*/
+.footer {
+      background-color: #222222;
+      color: white;
+      padding: 50px 0;
+    }
+    .footer-contact p{
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: small;
+    }
+    .footer-year p{
+      color: lightgray;
+    }
+
+    .footer-logo {
+      max-width: 250px;
+      margin-bottom: 20px;
+          margin-top: 40px;
+    }
+
+    .footer-contact {
+      margin-bottom: 50px;
+    }
+    .footer p{
+  font-family: 'Poppins', sans-serif;
+}
+
+    .footer-quick-links {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      line-height: 2;
+    }
+    .footer h4{
+      color: #63aaff;
+      font-family: 'Poppins', sans-serif;
+    }
+    .footer-quick-links li{
+      list-style: none;
+      margin-bottom: 5px;
+    }
+
+    .footer-quick-links li a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer-information {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      line-height: 2;
+
+    }
+
+
+    .footer-information li {
+      list-style: none;
+      margin-bottom: 5px;
+    }
+
+    .footer-information li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-social-media {
+      margin-bottom: 20px;
+      text-align: right;
+
+    }
+
+    .footer-social-media ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .footer-social-media ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .footer-social-media ul li a {
+      color: white;
+    }
+/*making mobile friendly*/
+@media(max-width:1028px)
+{
+
+  .navbar-brand{
+    font-size:1rem;
+    }
+
+    .nav-link{
+      font-size: 2.6rem;
+    }
+
+    .col-lg-4{
+      font-size: 1rem;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: auto;
+      padding-right: auto;
+    }
+    .btn btn-outline-light btn-lg{
+      display: block;
+      padding-left: auto;
+      padding-right: auto;
+    }
+  .copy{
+      text-align:  center;
+      margin-top: 40px;
+      font-size: 1rem;
+    }
+    .Advisory-title{
+      font-size: 1.5rem;
+    }
+    .Advisory-content{
+      font-size: 1rem;
+    }
+
+    .list-group{
+    padding-left: 0;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    }
+    .main-link{
+
+      font-size: 1rem;
+
+    }
+
+
+}

@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="hover.css">
+<link rel="stylesheet" type="text/css" href="slideshow1.css">
+<link rel="stylesheet" type="text/css" href="header.css">
+<link rel="stylesheet" type="text/css" href="headerstyle.css">
+<link rel="stylesheet" type="text/css" href="layout1.css">
+<link rel="stylesheet" type="text/css" href="layout.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+.bigbox{
+  margin-top: 50px;
+}
+  .quote {
+    min-height: 50vh;
+    background-color: #f9f9f9;
+    /* position: relative; */
+    margin-top: 50px;
+    margin-bottom: 150px;
+    padding: 20px;
+  }
+  
+  .quote h1 {
+    color: #286dc0;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+  }
+  
+  .text {
+    color: #222;
+    font-family: 'Yesteryear', cursive;
+    font-size: large;
+  }
+  
+  .notice-board {
+  background: #00356b;
+  padding: 20px;
+  height: 480px;
+  overflow-y: scroll;
+}
+
+.notice-board h2 {
+  color: #fff;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+
+.notice {
+  background-color: #fff;
+  color: #333;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-family: 'Source Serif Pro', serif;
+}
+
+.notice:last-child {
+  margin-bottom: 0;
+}
+
+.notice p {
+  margin: 0;
+}
+
+.notice-date {
+  font-size: small;
+  color: #999;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+        .bg {
+            background-color: #00356b;
+        }
+
+        .custom-container {
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+        .custom-container .row {
+            margin: 0;
+        }
+        .custom-container .col {
+            padding: 0;
+        }
+        .custom-container .col.small {
+            position: relative;
+            z-index: 1;
+            height: 235px;
+            width: 235px;
+        }
+        .custom-container .col.large {
+            height: 470px;
+            width: 470px;
+        }
+      
+        .custom-container .col.one h3,
+.custom-container .col.one h6 {
+  width: 100%;
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+  transform: translateY(20px); 
+}
+
+.custom-container .col.one:hover h3,
+.custom-container .col.one:hover h6 {
+  transform: translateY(0); 
+}
+.custom-container .col.four h3,
+.custom-container .col.four h6 {
+  width: 100%;
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+  transform: translateY(20px); 
+}
+
+.custom-container .col.four:hover h3,
+.custom-container .col.four:hover h6 {
+  transform: translateY(0); 
+}
+.custom-container .col.two h3,
+.custom-container .col.two h6 {
+  width: 100%;
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+  transform: translateY(20px);
+}
+
+.custom-container .col.two:hover h3,
+.custom-container .col.two:hover h6 {
+  transform: translateY(0); 
+}
+.custom-container .col.seven h3,
+.custom-container .col.seven h6 {
+  width: 100%;
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+  transform: translateY(20px); 
+}
+
+.custom-container .col.seven:hover h3,
+.custom-container .col.seven:hover h6 {
+  transform: translateY(0); 
+}
+.custom-container .col.eight h3,
+.custom-container .col.eight h6 {
+  width: 100%;
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+  transform: translateY(20px); 
+}
+
+.custom-container .col.eight:hover h3,
+.custom-container .col.eight:hover h6 {
+  transform: translateY(0); 
+}
+.custom-container .col.ten h3,
+.custom-container .col.ten h6 {
+  width: 100%;
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+  transform: translateY(20px); 
+}
+
+.custom-container .col.ten:hover h3,
+.custom-container .col.ten:hover h6 {
+  transform: translateY(0); 
+}
+        .custom-container .col.one {
+          background-repeat: no-repeat;
+          background-size: cover;
+            background-image: linear-gradient(rgba(40, 109, 192, 0.9), rgba(40, 109, 192, 0.9)), url(../Images/mission5.jpg) ;
+        }
+        .custom-container .col.two {
+          background-repeat: no-repeat;
+          background-size: cover;
+            background-image: linear-gradient(rgba(50, 182, 48, 0.777), rgba(50, 182, 48, 0.704)), url(../Images/policy1.jpg) ;
+
+        }
+        .custom-container .col.three {
+            background-color: #00356b;
+        }
+        .custom-container .col.four {
+            background-image: linear-gradient(rgba(195, 104, 52, 0.9), rgba(195, 104, 52, 0.9)), url(../Images/events\ 1.jpg);
+           
+        }
+        .custom-container .col.five {
+            background-image: linear-gradient(rgba(14, 4, 33, 0.8), rgba(14, 4, 33, 0.8)), url(../Images/school3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .custom-container .col.five{
+            height: 700px;
+            width: 800px;
+        position: absolute;
+        top: -150px;
+         left: 40%;
+           z-index: 0;
+        }
+        .fifth{
+          max-width: 400px;
+          margin: 0;
+          position: relative;
+          top: -80px;
+          left: -5%;
+        }
+        .fifth h1,h6{
+          font-family: 'Source Serif Pro', serif;
+            font-weight: 300;
+        }
+        .sixth{
+          max-width: 350px;
+          position: relative;
+          top: 80px;
+          left:-10%;
+        }
+        .sixth h2,h6{
+          font-family: 'Source Serif Pro', serif;
+            font-weight: 300;
+        }
+        h6.underline {
+    position: relative;
+    display: inline-block;
+  }
+
+  h6.underline::after {
+    content: '';
+    position: absolute;
+    bottom: -60%; 
+    left: 20%;
+    width: 50%;
+    border-bottom: 2px solid #fff;
+  }
+
+
+        .custom-container .col.six {
+          background-repeat: no-repeat;
+          background-size: cover;
+            background-image: linear-gradient(rgba(40, 109, 192, 0.9), rgba(40, 109, 192, 0.9)), url(../Images/calender1.jpg);
+
+        }
+        .custom-container .col.seven {
+          background-size: cover;
+          background-repeat: no-repeat;
+            background-image: linear-gradient(rgba(50, 182, 48, 0.704), rgba(50, 182, 48, 0.704)), url(../Images/student3.jpg);
+
+        }
+        .custom-container .col.eight {
+          background-repeat: no-repeat;
+          background-size: cover;
+            background-image: linear-gradient(rgba(75, 126, 168, 0.7), rgba(75, 126, 168, 0.7)), url(../Images/admission2.jpg);
+
+        }
+        .custom-container .col.nine {
+            background-color: #00356b;
+        }
+        .custom-container .col.ten {
+            background-image: linear-gradient(rgba(195, 104, 52, 0.9), rgba(195, 104, 52, 0.9)), url(../Images/gallery.jpg);
+
+        }
+        h3,h6{
+            font-family: 'Source Serif Pro', serif;
+            font-weight: 300;
+        }
+        .dropdown-button{
+            color: #286DC0;
+        }
+       
+
+
+        .footer {
+      background-color: #222222;
+      color: white;
+      padding: 50px 0;
+    }
+    .footer-contact p{
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: small;
+    }
+    .footer-year p{
+      color: lightgray;
+    }
+
+    .footer-logo {
+      max-width: 250px;
+      margin-bottom: 20px;
+          margin-top: 40px;
+    }
+
+    .footer-contact {
+      margin-bottom: 50px;
+    }
+    .footer p{
+  font-family: 'Poppins', sans-serif;
+}
+
+    .footer-quick-links {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      line-height: 2;
+    }
+    .footer h4{ 
+      color: #63aaff;
+      font-family: 'Poppins', sans-serif;
+    }
+    .footer-quick-links li{
+      list-style: none;
+      margin-bottom: 5px;
+    }
+
+    .footer-quick-links li a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer-information {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      line-height: 2;
+
+    }
+
+    
+    .footer-information li {
+      list-style: none;
+      margin-bottom: 5px;
+    }
+
+    .footer-information li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-social-media {
+      margin-bottom: 20px;
+      text-align: right;
+    
+    }
+
+    .footer-social-media ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .footer-social-media ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .footer-social-media ul li a {
+      color: white;
+    }
+
+   .icon-box img{
+  width: 25%;
+}
+#main.row{
+  padding: 40px;
+}
+#main{
+  background-color: #00356B;
+  padding: 30px;
+}
+.icon-stats{
+  color: #286DC0;
+}
+.icon-title{
+  color: white;
+}
+    
+    </style>
+</head>
+<body>
+  
+  <table border="0" width="100%" bgcolor="1C3879">
+    <tr>
+    <td align="center" width="90%" height="100"><h1></h1></td>
+    </table>
+    
+  <table id="navbar">
+    <tr>
+      <th width="150"><a href="" style="color:black; width:30px;">Home</a></th>
+  
+      <td>
+        <div class="dropdown">
+          <button class="dropbtn">About Us</button>
+          <div class="dropdown-content">
+            <a href="../mission/mission.html">Mission & Core Values</a>
+            <a href="../organizational/organizational.html">Organizational Structure</a>
+            <a href="">Administration</a>
+  <a href="../About Us/CampusTour.html">About School</a>
+            <a href="../About Us/ourpolicies.html">Our Policies</a>
+            <a href="../Parents Advisory Committee/index.html">Parents Duty</a>
+  <a href="#">Founders Desk</a>
+          </div>
+        </div>
+      </td>
+  
+  
+  
+  
+  <td>
+        <div class="dropdown">
+          <button class="dropbtn">Faculties & Infrastructure</button>
+          <div class="dropdown-content">
+            <a href="../infrastructure/index.html">Infrastructure</a>
+            <a href="../transport.html">Transport, Safety & Security</a>
+            <a href="../Facilities and Infrastructure/ExtraCurriculars.html">Extracurricular Activities</a>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="dropdown">
+          <button class="dropbtn">Academics</button>
+          <div class="dropdown-content">
+            <a href="#">Admissions</a>
+            <a href="../Faculties/faculties.html">Faculties and Staff</a>
+            <a href="../curriculars/curriculars.html">Curriculars</a>
+            <a href="../Academics/CareerGuidance.html">Career Guidance</a>
+  <a href="../Academics/studentcorner.html">Students Corner</a>
+          </div>
+        </div>
+      </td>
+
+  <td>
+        <div class="dropdown">
+          <button class="dropbtn">Beyond Academics</button>
+          <div class="dropdown-content">
+            <a href="../School Calender/index.html">Activities</a>
+            <a href="#">Clubs, House</a>
+            <a href="#">Past Events</a>
+  <a href="../Beyond Academics/creativecorner.html">Creative Corner</a>
+            <a href="../Beyond Academics/teachercorner.html">Teachers Corner</a>
+            <a href="#">Student Counselling</a>
+  <a href="#">Social Outreach</a>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="dropdown">
+          <button class="dropbtn">Media & Gallery</button>
+          <div class="dropdown-content">
+            <a href="../Media Mentions/index.html">Media Mentions</a>
+            <a href="#">Gallery</a>
+           
+          </div>
+        </div>
+      </td>
+  
+  <td>
+        <div class="dropdown">
+          <button class="dropbtn">Contact Us & Feedback</button>
+          <div class="dropdown-content">
+            <a href="../address and contact form/address .html">Contact Form</a>
+            <a href="../Discussion formum/index.html">Discussion Forum</a>
+            <a href="../Contact Us and Feedback/JoinUs.html">Join Us</a>
+          </div>
+        </div>
+      </td>
+      
+    </tr>
+  </table>
+  
+    <table border="0" width="100%" bgcolor="white">
+    <tr>
+    <td></td>
+    </tr>
+    <tr>
+    <td></td>
+    </tr>
+    <tr>
+    <td></td>
+    </tr>
+    </table>
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="one.jpg" style="width: 100%">
+      <div class="text">Caption Text</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="two.jpg" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="little.jpg" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"  onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+  
+
+ 
+
+  <div class="container-fluid bigbox">
+    <div class="row">
+      <div class="col-lg-7 quote text-center">
+        <h1 class="quote-heading pt-5">Quote of the Day</h1>
+        <blockquote id="quote" class="text"></blockquote>
+      </div>
+        <div class="col-lg-5 notice-board">
+          <h2 class="text-white">Notice Board</h2>
+          <div id="dynamic-notice" class="mt-4"></div>
+        </div>
+        
+    </div>
+  </div>
+
+  <section id="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="icon-box">
+            <img src="../Images/Apna School Final.jpg" alt="">
+            <h3 class="icon-stats">3000+</h3>
+            <p class="icon-title">Student Service Hours</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="icon-box">
+            <img src="../Images/Apna School Final.jpg" alt="">
+            <h4 class="icon-stats">64.5</h4>
+            <p class="icon-title">Acre Campus</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="icon-box">
+            <img src="../Images/Apna School Final.jpg" alt="">
+            <h4 class="icon-stats">63%</h4>
+            <p class="icon-title">Faculty with Advanced Degrees</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="icon-box">
+            <img src="../Images/Apna School Final.jpg" alt="">
+            <h4 class="icon-stats">1400</h4>
+            <p class="icon-title">Total enrollment</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="icon-box">
+            <img src="../Images/Apna School Final.jpg" alt="">
+            <h4 class="icon-stats">5</h4>
+            <p class="icon-title">Sports offered</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="icon-box">
+            <img src="../Images/Apna School Final.jpg" alt="">
+            <h4 class="icon-stats">63%</h4>
+            <p class="icon-title">Faculty with Advanced Degrees</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="icon-box">
+            <img src="../Images/Apna School Final.jpg" alt="">
+            <h4 class="icon-stats">1400</h4>
+            <p class="icon-title">Total enrollment</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="icon-box">
+            <img src="../Images/Apna School Final.jpg" alt="">
+            <h4 class="icon-stats">5</h4>
+            <p class="icon-title">Sports offered</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+   <marquee  bgcolor="F8F8F8" scrollamount="10" direction="left" width="1600" height="120" <center>
+  <center><font face="cooper black" color="black" size="6" alignment="centre">APNA SCHOOL</font>
+  </marquee>
+ 
+        <div class="container-fluid main bg py-5 mt-5">
+            <div class="container">
+              <div class="container bg custom-container">
+                <div class="row">
+                  <div class="col col-md-6">
+                    <div class="row">
+                      <div class="col">
+                        <div class="container-fluid ml-3">
+                          <div class="row">
+                            <div class="col small one">
+                              <!-- Content for column one -->
+                              <h3 class="text-light pt-5 mt-5 pl-4">Our Mission</h3>
+                              <h6 class="ml-4 pt-4 text-light"> <i class="fa fa-sharp fa-light fa-arrow-right fa-2xl"></i></i></h6>
+                            </div>
+                            <div class="col small two">
+                              <!-- Content for column two -->
+                              <h3 class="text-light pt-5 mt-5 pl-4">Our Policies</h3>
+                              <h6 class="ml-4 pt-4 text-light"> <i class="fa fa-sharp fa-light fa-arrow-right fa-2xl"></i></i></h6>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col small three">
+                              <!-- Content for column three -->
+                            </div>
+                            <div class="col small four">
+                              <!-- Content for column four -->
+                              <h3 class="text-light pt-5 mt-5 pl-4">Upcoming Events</h3>
+                              <h6 class="ml-4 pt-4 text-light"> <i class="fa fa-sharp fa-light fa-arrow-right fa-2xl"></i></i></h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        <div class="col five   mt-5 d-flex align-items-center justify-content-center">
+          <div class="container fifth">
+            <h6 class="text-light pl-3 ml-3 underline">CAMPUS</h6>
+            
+          <h1 class="text-light pl-4 pt-3">Apna School</h1>
+                              <h6 class="ml-4 pt-4 text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quaerat sit error soluta ex rerum eos dolorum, distinctio aliquam! Recusandae?</h6>
+                              <button type="button" class="btn btn-outline-light btn-sm m-4 px-4 py-3">SEE THE CAMPUS</button>
+                            </div>
+      </div>
+            </div>
+        </div>
+        <div class="container bg custom-container">
+            <div class="row">
+                <div class="col large six">
+                  <div class="container sixth">
+                  <h2 class="text-light pl-4 pt-3">Academics</h2>
+                                      <h6 class="ml-4 pt-4 text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, officiis provident facere quasi aspernatur corrupti.</h6>
+                                      <button type="button" class="btn btn-outline-light btn-sm m-4 px-3 py-2">CALENDER</button>
+                                    </div>
+                </div>
+                <div class="col col-md-6">
+            <div class="row">
+                <div class="col  small seven">
+                  <h3 class="text-light pt-5 mt-5 pl-4">Student's Corner</h3>
+                              <h6 class="ml-4 pt-4 text-light"> <i class="fa fa-sharp fa-light fa-arrow-right fa-2xl"></i></i></h6>
+                </div>
+                <div class="col small eight">
+                  <h3 class="text-light pt-5 mt-5 pl-4">Admissions</h3>
+                              <h6 class="ml-4 pt-4 text-light"> <i class="fa fa-sharp fa-light fa-arrow-right fa-2xl"></i></i></h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col small nine"></div>
+                <div class="col small ten">
+                  <h3 class="text-light pt-5 mt-5 pl-4">Gallery</h3>
+                              <h6 class="ml-4 pt-4 text-light"> <i class="fa fa-sharp fa-light fa-arrow-right fa-2xl"></i></i></h6>
+                </div>
+            </div>
+            </div>
+          
+                </div>
+            </div>
+        </div>  
+    </div> 
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div id="map" style="height: 200px;"></div>
+          </div>
+          <div class="col-md-3">
+            <h4 class="mb-4 p-1">CONTACT US</h4>
+            <p>Address: 123 Street, City, Country</p>
+            <p>Email: info@example.com</p>
+            <p>Phone: 123-456-7890</p>
+          </div>
+          <div class="col-md-3">
+            <h4>QUICK LINKS</h4>
+            <div class="footer-quick-links">
+              <li><a href="../About Us/ourpolicies.html">Our Policies</a></li>
+              <li><a href="#">Parents Association</a></li>
+              <li><a href="#">Public Disclosure</a></li>
+              <li><a href="#">Location</a></li>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h4>INFORMATION</h4>
+            <div class="footer-information">
+              <li><a href="#">Calendar</a></li>
+              <li><a href="#">Transfer Certificate</a></li>
+              <li><a href="#">Intranet</a></li>
+              <li><a href="#">Career Opportunity</a></li>
+            </div>
+          </div>
+        </div>
+        <div class="row border-top border-3 pt-3">
+           <div class="col-md-6">
+            <p class="footer-year">
+             Copyright &copy; <span id="year"></span> Apna School. All Rights Reserved.
+            </p>
+        </div>
+  
+          <div class="col-md-6">
+            <div class="footer-social-media">
+              <ul>
+                <li><a href="#"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+                <li><a href="#"><i class="fa fab fa-twitter fa-xl"></i></a></li>
+                <li><a href="#"><i class="fa fab fa-instagram fa-xl"></i></a></li>
+                <li><a href="#"><i class="fa fab fa-linkedin fa-xl"></i></a></li>
+                <li><a href="#"><i class="fa fab fa-youtube fa-xl"></i></a></li>
+              </ul>
+            </div>
+            </div>
+            <hr>
+        </div>
+      </div>
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
+
+<!-- Custom JavaScript -->
+<script>
+  function initMap() {
+    // Specify the coordinates of your location  
+    var myLatLng = {lat: 24.24166364346895, lng: 86.159596114646};
+
+    // Create a map object and specify the DOM element for display
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: myLatLng,
+      zoom: 12
+    });
+
+    // Create a marker and set its position
+    var marker = new google.maps.Marker({
+      map: map,
+      position: myLatLng,
+      title: 'Apna School'
+    });
+  }
+  var currentYear = new Date().getFullYear();
+    document.getElementById("year").innerHTML = currentYear;
+    
+  </script>
+    <script src="Quote.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
