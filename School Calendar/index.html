@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Event Calendar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/evo-calendar.min.css">
+    <link rel="stylesheet" href="css/evo-calendar.midnight-blue.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <section id="header">
+      <!-- Nav Bar -->
+      <table border="0" width="100%" bgcolor="00356b">
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+        <td></td>
+        <td></td>
+
+        <td></td>
+        <td></td>
+
+        <td><img src="Apna School Final.jpg" height="90" width="90" style="margin-left:20px; padding: 10px"></td>
+        <td width="90%" height="50"><h1 style="font-family: 'Arial', sans-serif;
+          font-size: 26px;
+            font-weight: 500;
+            color: #fff">APNA SCHOOL</h1></td>
+        <td><input type="button" value="Login" style="width:120px;height:50px;background-color:white;color:blue;"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+
+
+        <td></td>
+        <td></td>
+        <td><input type="button" value="Fee Payment" style="width:120px;height:50px;background-color:white;color:blue;margin-right: 30px"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+
+
+        </table>
+
+
+
+          <table border="0" width="100%" bgcolor="white">
+          <tr>
+          <td></td>
+          </tr>
+          <tr>
+          <td></td>
+          </tr>
+          <tr>
+          <td></td>
+          </tr>
+          </table>
+
+
+
+        <table id="navbar">
+          <tr>
+            <th width="150"><a href="" style="color:black; width:30px; margin: 70px">Home</a></th>
+
+            <td>
+              <div class="dropdown">
+                <button class="dropbtn">About Us</button>
+                <div class="dropdown-content">
+                  <a href="#">Mission & Core Values</a>
+                  <a href="#">Organizational Structure</a>
+                  <a href="#">Administration</a>
+        <a href="#">About School</a>
+                  <a href="#">Our Policies</a>
+                  <a href="#">Parents Duty</a>
+        <a href="#">Founders Desk</a>
+                </div>
+              </div>
+            </td>
+
+
+
+
+        <td>
+              <div class="dropdown">
+                <button class="dropbtn">Faculties & Infrastructure</button>
+                <div class="dropdown-content">
+                  <a href="#">Infrastructure</a>
+                  <a href="#">Transport, Safety & Security</a>
+                  <a href="#">Extracurricular Facilities</a>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="dropdown">
+                <button class="dropbtn">Academics</button>
+                <div class="dropdown-content">
+                  <a href="#">Admissions</a>
+                  <a href="#">Curriculars</a>
+                  <a href="#">Faculties & Staff</a>
+        <a href="#">Activities </a>
+                  <a href="#">Career Guidance</a>
+        <a href="#">Students Corner</a>
+                </div>
+              </div>
+            </td>
+
+
+
+        <td>
+              <div class="dropdown">
+                <button class="dropbtn">Beyond Academics</button>
+                <div class="dropdown-content">
+                  <a href="#">Activities</a>
+                  <a href="#">Clubs, House</a>
+                  <a href="#">Past Events</a>
+        <a href="#">Creative Corner</a>
+                  <a href="#">Teachers Corner</a>
+                  <a href="#">Student Counselling</a>
+        <a href="#">Social Outreach</a>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="dropdown">
+                <button class="dropbtn">Media & Gallery</button>
+                <div class="dropdown-content">
+                  <a href="#">Media Mentions</a>
+                  <a href="#">Gallery</a>
+
+                </div>
+              </div>
+            </td>
+
+
+        <td>
+              <div class="dropdown">
+                <button class="dropbtn">Contact Us & Feedback</button>
+                <div class="dropdown-content">
+                  <a href="#">Contact Form</a>
+                  <a href="#">Discussion Forum</a>
+                  <a href="#">Join Us</a>
+                </div>
+              </div>
+            </td>
+
+                <!-- Repeat the above <td> block for each dropdown -->
+              </tr>
+            </table>
+
+              <table border="0" width="100%" bgcolor="white">
+              <tr>
+              <td></td>
+              </tr>
+              <tr>
+              <td></td>
+              </tr>
+              <tr>
+              <td></td>
+              </tr>
+              </table>
+  </section>
+
+    <section id="main">
+      <div class="container">
+        <div class="main-title">
+          <h1 style="color:#00356b;font-family: 'Merriweather', serif;">School Calendar</h1>
+        </div>
+        <div class="hero" style="font-family: 'Merriweather', serif;">
+          <div id="calendar"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+       <div class="container">
+         <div class="row">
+           <div class="col-md-3">
+             <div id="map" style="height: 200px;"></div>
+           </div>
+           <div class="col-md-3">
+             <h4 class="mb-4 p-1">CONTACT US</h4>
+             <p>Address: 123 Street, City, Country</p>
+             <p>Email: info@example.com</p>
+             <p>Phone: 123-456-7890</p>
+           </div>
+           <div class="col-md-3">
+             <h4>QUICK LINKS</h4>
+             <div class="footer-quick-links">
+               <li><a href="../About Us/ourpolicies.html">Our Policies</a></li>
+               <li><a href="#">Parents Association</a></li>
+               <li><a href="#">Public Disclosure</a></li>
+               <li><a href="#">Location</a></li>
+             </div>
+           </div>
+           <div class="col-md-3">
+             <h4>INFORMATION</h4>
+             <div class="footer-information">
+               <li><a href="#">Calendar</a></li>
+               <li><a href="#">Transfer Certificate</a></li>
+               <li><a href="#">Intranet</a></li>
+               <li><a href="#">Career Opportunity</a></li>
+             </div>
+           </div>
+         </div>
+         <div class="row border-top border-3 pt-3">
+            <div class="col-md-6">
+             <p class="footer-year">
+              Copyright &copy; <span id="year"></span> Apna School. All Rights Reserved.
+             </p>
+         </div>
+
+           <div class="col-md-6">
+             <div class="footer-social-media">
+               <ul>
+                 <li><a href="#"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+                 <li><a href="#"><i class="fa fab fa-twitter fa-xl"></i></a></li>
+                 <li><a href="#"><i class="fa fab fa-instagram fa-xl"></i></a></li>
+                 <li><a href="#"><i class="fa fab fa-linkedin fa-xl"></i></a></li>
+                 <li><a href="#"><i class="fa fab fa-youtube fa-xl"></i></a></li>
+               </ul>
+             </div>
+             </div>
+             <hr>
+         </div>
+       </div>
+     </footer>
+     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="evo-calendar.min.js" charset="utf-8"></script>
+    <script src="index.js" charset="utf-8"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
+    </html>
+    </body>
+    </html>

@@ -8,10 +8,53 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
-    body {
+
+#navbar {
+  background-color: white;
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: inherit;
+  color: black;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover{
+  background-color: #286dc0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    /* body {
       font-family: 'Source Serif Pro', serif;
       background-color: #f8f8f8;
-    }
+    } */
 
     h1, h4 {
       font-family: 'Merriweather', serif;
@@ -47,7 +90,7 @@
       transform: translate(0, -80%);
       width: 50%;
       text-align: center;
-      z-index: 1;
+      /* z-index: 1; */
       padding: 0 10px;
       background: linear-gradient(to right, rgba(33, 71, 109, 0.7), rgba(33, 71, 109, 0));
     }
@@ -64,6 +107,8 @@
     .policy {
       margin-bottom: 30px;
       text-align: center;
+      font-family: 'Source Serif Pro', serif;
+      background-color: #f8f8f8;
     }
 
     .policy a {
@@ -165,112 +210,161 @@
   </style>
 </head>
 <body>
-  <section id="header">
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #00356B;">
-    <div class="container">
-    <a class="navbar-brand" href="#">
-    <img src="Apna School Final.jpg" alt="Logo" width="70" height="60" class="d-inline-block align-text-top">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            About Us
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">The School</a></li>
-            <li><a class="dropdown-item" href="#">Organizational Structure</a></li>
-            <li><a class="dropdown-item" href="#">Administration</a></li>
-            <li><a class="dropdown-item" href="#">Our Policies</a></li>
-            <li><a class="dropdown-item" href="#">Parent's Duty</a></li>
-            <li><a class="dropdown-item" href="#">Founder's Desk</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Facilities And Infrastructure
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Infrastructure</a></li>
-            <li><a class="dropdown-item" href="#">Transport,Safety & Security</a></li>
-            <li><a class="dropdown-item" href="#">Extra Curricular Facilities</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Admission
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Admissions</a></li>
-            <li><a class="dropdown-item" href="#">Curriculars</a></li>
-            <li><a class="dropdown-item" href="#">Faculties And Staff</a></li>
-            <li><a class="dropdown-item" href="#">Rules And Regulation</a></li>
-            <li><a class="dropdown-item" href="#">Academic Calendar</a></li>
-            <li><a class="dropdown-item" href="#">Career Guidance</a></li>
-            <li><a class="dropdown-item" href="#">Student's Corner</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Beyond Academics
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Activities</a></li>
-            <li><a class="dropdown-item" href="#">Clubs & House</a></li>
-            <li><a class="dropdown-item" href="#">Past Events</a></li>
-            <li><a class="dropdown-item" href="#">Creative Corner</a></li>
-            <li><a class="dropdown-item" href="#">Teacher's Corner</a></li>
-            <li><a class="dropdown-item" href="#">Student Counselling</a></li>
-            <li><a class="dropdown-item" href="#">Social Outreach</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Media And Gallery
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Media Mentions</a></li>
-            <li><a class="dropdown-item" href="#">Gallery</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Contact Us & Feedback
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Contact Form</a></li>
-            <li><a class="dropdown-item" href="#">Discussion Forum(*)/Blog</a></li>
-            <li><a class="dropdown-item" href="#">Join Us</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Login</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Fee Payment</a>
-        </li>
-
-      </ul>
-    </div>
-    </div>
-    </nav>
-</section>
+  <table border="0" width="100%" bgcolor="00356b">
+    <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+    <td></td>
+    <td></td>
+    
+    <td></td>
+    <td></td>
+    
+    <td><img src="../Images/Apna School Final.jpg" height="90" width="90" style="margin-left:20px; padding: 10px"></td>
+    <td width="90%" height="50"><h1 style="font-family: 'Arial', sans-serif;
+      font-size: 26px;
+        font-weight: 500;
+        color: #fff">APNA SCHOOL</h1></td>
+    <td><input type="button" value="Login" style="width:120px;height:50px;background-color:white;color:blue;"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+    
+    
+    <td></td>
+    <td></td>
+    <td><input type="button" value="Fee Payment" style="width:120px;height:50px;background-color:white;color:blue;margin-right: 30px"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+    
+    
+    </table>
+    
+    
+    
+      <table border="0" width="100%" bgcolor="white">
+      <tr>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      </tr>
+      </table>
+    
+    
+    
+    <table id="navbar">
+      <tr>
+        <th width="150"><a href="" style="color:black; width:30px; margin: 70px">Home</a></th>
+    
+        <td>
+          <div class="dropdown">
+            <button class="dropbtn">About Us</button>
+            <div class="dropdown-content">
+              <a href="#">Mission & Core Values</a>
+              <a href="#">Organizational Structure</a>
+              <a href="#">Administration</a>
+    <a href="#">About School</a>
+              <a href="#">Our Policies</a>
+              <a href="#">Parents Duty</a>
+    <a href="#">Founders Desk</a>
+            </div>
+          </div>
+        </td>
+    
+    
+    
+    
+    <td>
+          <div class="dropdown">
+            <button class="dropbtn">Faculties & Infrastructure</button>
+            <div class="dropdown-content">
+              <a href="#">Infrastructure</a>
+              <a href="#">Transport, Safety & Security</a>
+              <a href="#">Extracurricular Facilities</a>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="dropdown">
+            <button class="dropbtn">Academics</button>
+            <div class="dropdown-content">
+              <a href="#">Admissions</a>
+              <a href="#">Curriculars</a>
+              <a href="#">Faculties & Staff</a>
+    <a href="#">Activities </a>
+              <a href="#">Career Guidance</a>
+    <a href="#">Students Corner</a>
+            </div>
+          </div>
+        </td>
+    
+    
+    
+    <td>
+          <div class="dropdown">
+            <button class="dropbtn">Beyond Academics</button>
+            <div class="dropdown-content">
+              <a href="#">Activities</a>
+              <a href="#">Clubs, House</a>
+              <a href="#">Past Events</a>
+    <a href="#">Creative Corner</a>
+              <a href="#">Teachers Corner</a>
+              <a href="#">Student Counselling</a>
+    <a href="#">Social Outreach</a>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="dropdown">
+            <button class="dropbtn">Media & Gallery</button>
+            <div class="dropdown-content">
+              <a href="#">Media Mentions</a>
+              <a href="#">Gallery</a>
+             
+            </div>
+          </div>
+        </td>
+    
+    
+    <td>
+          <div class="dropdown">
+            <button class="dropbtn">Contact Us & Feedback</button>
+            <div class="dropdown-content">
+              <a href="#">Contact Form</a>
+              <a href="#">Discussion Forum</a>
+              <a href="#">Join Us</a>
+            </div>
+          </div>
+        </td>
+          
+            <!-- Repeat the above <td> block for each dropdown -->
+          </tr>
+        </table>
+        
+          <table border="0" width="100%" bgcolor="white">
+          <tr>
+          <td></td>
+          </tr>
+          <tr>
+          <td></td>
+          </tr>
+          <tr>
+          <td></td>
+          </tr>
+          </table>
+  
 
   <div class="container-fluid p-0">
     <div class="row">

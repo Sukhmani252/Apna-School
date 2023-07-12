@@ -16,61 +16,184 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <link rel="stylesheet" type="text/css" href="hover.css">
 <link rel="stylesheet" type="text/css" href="slideshow1.css">
 <link rel="stylesheet" type="text/css" href="dropbutton.css">
-<link rel="stylesheet" type="text/css" href="socialmediaicons.css">
-<link rel="stylesheet" type="text/css" href="missionheading.css">
+<link rel="stylesheet" type="text/css" href="header.css">
+<link rel="stylesheet" type="text/css" href="headerstyle.css">
+<link rel="stylesheet" type="text/css" href="layout.css">
+<link rel="stylesheet" type="text/css" href="layout1.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<style>
+  body {
+    font-family: 'Source Serif Pro', serif;
+    background-color: #f8f8f8;
+  }
+
+  h1, h4 {
+    font-family: 'Merriweather', serif;
+    color: #286dc0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .custom-container {
+    max-width: 700px;
+    background-color: #fff;
+    padding: 30px 100px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .header {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .header-image {
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+  }
+
+  .header-content {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    transform: translate(0, -80%);
+    width: 50%;
+    text-align: center;
+    z-index: 1;
+    padding: 0 10px;
+    background: linear-gradient(to right, rgba(33, 71, 109, 0.7), rgba(33, 71, 109, 0));
+  }
+
+  .header h1 {
+    font-family: "Merriweather", serif;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px 20px;
+  }
+
+  .policy {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .policy a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #286dc0;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .policy a:hover {
+    background-color: darkgray;
+  }
+
+  .footer {
+    background-color: #222222;
+    color: white;
+    padding: 50px 0;
+  }
+  .footer-contact p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: small;
+  }
+  .footer-year p{
+    color: lightgray;
+  }
+
+  .footer-logo {
+    max-width: 250px;
+    margin-bottom: 20px;
+        margin-top: 40px;
+  }
+
+  .footer-contact {
+    margin-bottom: 50px;
+  }
+  .footer p{
+font-family: 'Poppins', sans-serif;
+}
+
+  .footer-quick-links {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    line-height: 2;
+  }
+  .footer h4{ 
+    color: #63aaff;
+    font-family: 'Poppins', sans-serif;
+  }
+  .footer-quick-links li{
+    list-style: none;
+    margin-bottom: 5px;
+  }
+
+  .footer-quick-links li a {
+    color: white;
+    text-decoration: none;
+  }
+  .footer-information {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    line-height: 2;
+
+  }
+
+  
+  .footer-information li {
+    list-style: none;
+    margin-bottom: 5px;
+  }
+
+  .footer-information li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer-social-media {
+    margin-bottom: 20px;
+    text-align: right;
+  
+  }
+
+  .footer-social-media ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .footer-social-media ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .footer-social-media ul li a {
+    color: white;
+  }
+  
+</style>
 </head>
 
 
 <body>
 
-<table border="0" width="100%" bgcolor="1C3879">
-<tr>
-<td align="center" width="90%" height="100"><h1>APNA SCHOOL</h1></td>
-</table>
-
-
-
-  <table border="0" width="100%" bgcolor="white">
+  ulties & Staff</a>
+  <a href="#">Activities </a><table border="0" width="100%" bgcolor="1C3879">
   <tr>
-  <td></td>
-  </tr>
-  <tr>
-  <td></td>
-  </tr>
-  <tr>
-  <td></td>
-  </tr>
+  <td align="center" width="90%" height="100"><h1>APNA SCHOOL</h1></td>
   </table>
-  <table colspan="2" border="0" width="100%" height="20" bgcolor="white">
-    <tr>
-<th><a href="" style="color:black;">Home</a></th>
-    <th>
-<div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">About Us</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#home">Mission & Core Values</a>
-    <a href="#about">Organizational Structure</a>
-    <a href="#contact">Administration</a>
-<a href="#about">About School</a>
-    <a href="#contact">Our Policies</a>
-<a href="#about">Parents Duty</a>
- <a href="#about">Founders Desk</a>   
-  </div>
-</div>
-</th>
-    <th><a href="" style="color:black;">Facilities & Infrastructures</a></th>
-    <th><a href="" style="color:black;">Academics</a></th>
-    <th><a href="" style="color:black;">Beyond Academics</a></th>
-    <th><a href="" style="color:black;">Media & Gallery</a></th>
-    <th><a href="" style="color:black;">Contact Us & Feedback</a></th>
-    </tr>
-    </tr>
-    </table>
+  
+  
+  
     <table border="0" width="100%" bgcolor="white">
     <tr>
     <td></td>
@@ -82,37 +205,162 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <td></td>
     </tr>
     </table>
+  
+  
+  
+  <table id="navbar">
+    <tr>
+      <th width="150"><a href="" style="color:black; width:30px;">Home</a></th>
+  
+      <td>
+        <div class="dropdown">
+          <button class="dropbtn">About Us</button>
+          <div class="dropdown-content">
+            <a href="#">Mission & Core Values</a>
+            <a href="#">Organizational Structure</a>
+            <a href="#">Administration</a>
+  <a href="#">About School</a>
+            <a href="#">Our Policies</a>
+            <a href="#">Parents Duty</a>
+  <a href="#">Founders Desk</a>
+          </div>
+        </div>
+      </td>
+  
+  
+  
+  
+  <td>
+        <div class="dropdown">
+          <button class="dropbtn">Faculties & Infrastructure</button>
+          <div class="dropdown-content">
+            <a href="#">Infrastructure</a>
+            <a href="#">Transport, Safety & Security</a>
+            <a href="#">Extracurricular Facilities</a>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="dropdown">
+          <button class="dropbtn">Academics</button>
+          <div class="dropdown-content">
+            <a href="#">Admissions</a>
+            <a href="#">Curriculars</a>
+            <a href="#">Fac
+            <a href="#">Career Guidance</a>
+  <a href="#">Students Corner</a>
+          </div>
+        </div>
+      </td>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <td>
+        <div class="dropdown">
+          <button class="dropbtn">Beyond Academics</button>
+          <div class="dropdown-content">
+            <a href="#">Activities</a>
+            <a href="#">Clubs, House</a>
+            <a href="#">Past Events</a>
+  <a href="#">Creative Corner</a>
+            <a href="#">Teachers Corner</a>
+            <a href="#">Student Counselling</a>
+  <a href="#">Social Outreach</a>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="dropdown">
+          <button class="dropbtn">Media & Gallery</button>
+          <div class="dropdown-content">
+            <a href="#">Media Mentions</a>
+            <a href="#">Gallery</a>
+           
+          </div>
+        </div>
+      </td>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <td>
+        <div class="dropdown">
+          <button class="dropbtn">Contact Us & Feedback</button>
+          <div class="dropdown-content">
+            <a href="#">Contact Form</a>
+            <a href="#">Discussion Forum</a>
+            <a href="#">Join Us</a>
+          </div>
+        </div>
+      </td>
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <!-- Repeat the above <td> block for each dropdown -->
+    </tr>
+  </table>
+  
+  
+  
+  
+  
+  
+  
+    <table border="0" width="100%" bgcolor="white">
+    <tr>
+    <td></td>
+    </tr>
+    <tr>
+    <td></td>
+    </tr>
+    <tr>
+    <td></td>
+    </tr>
+  </table>
 
 
 
 
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
-
-<div class="container">
-  <img src="image7.jpg" alt="Nature" style="width:100%;">
-  <div class="text-block">
-  <center>  <h2><center>Organizational Structure</center></h2></center>
-    
+<div class="container-fluid p-0">
+  <div class="row">
+    <div class="col-md-12 header">
+      <img src="image7.jpg" class="header-image" alt="Header Image">
+      <div class="header-content">
+        <h1>Organizational Structure</h1>
+      </div>
+    </div>
   </div>
+</div>
+
 </div>
 <div class="w3-row-padding w3-grayscale">
     <div class="w3-col l3 m6 w3-margin-bottom">
@@ -139,48 +387,70 @@ window.onclick = function(event) {
   <table border="0" width="100%" bgcolor="#14274e" >
     <tr><td><br><br><br><br><br><br></td></tr>
     </table>
-    <center>
-    <table border="0" width="50%" bgcolor="#14274e">
-    <tr>
-    <td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>CONTACT US</b></font><hr width="250" height="10"></td>
-    
-    <td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>QUICKLINKS</b></font><hr width="250" height="10"></td>
-    <td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>INFORMATION</b></font><hr width="250" height="10"></td>
-    </tr>
-    <tr>
-    <td>
-    <a href=""><font color="white">Contact address of apna school</a><br>
-      <td>
-    
-        <a href=""><font color="white">Dining</a><br>
-        
-        <a href=""><font color="white">Parents Association</a><br>
-          <a href=""><font color="white">Public disclosure</a><br>
-            <a href=""><font color="white">Location</a><br>
-        <td>
-          <a href=""><font color="white">Calender</a><br>
-            <a href=""><font color="white">Directory</a><br>
-              <a href=""><font color="white">Transfer certificate</a><br>
-                <a href=""><font color="white">Career opportunity</a><br>
-        </td>
-        </table>
-        </center>
-        <table border="0" width="100%" bgcolor="#14274e" >
-
-            <tr>
-        
-        <td><br><br><br><br><br>
-        
-        <center>
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-linkedin"></a>
-        <a href="#" class="fa fa-instagram"></a></center></td>
-        <td>
-        
-            <hr class="rounded">
-            </td>
-            </tr>
-            </table>
-            </body>
-        </html>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../Images/neom-ud9NlvvEzUI-unsplash.jpg" class="footer-logo" alt="Logo">
+          </div>
+          <div class="col-md-3">
+            <h4 class="mb-4 p-1">CONTACT US</h4>
+            <p>Address: 123 Street, City, Country</p>
+            <p>Email: info@example.com</p>
+            <p>Phone: 123-456-7890</p>
+          </div>
+          <div class="col-md-3">
+            <h4>QUICK LINKS</h4>
+            <div class="footer-quick-links">
+              <li><a href="../About Us/ourpolicies.html">Our Policies</a></li>
+              <li><a href="#">Parents Association</a></li>
+              <li><a href="#">Public Disclosure</a></li>
+              <li><a href="#">Location</a></li>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h4>INFORMATION</h4>
+            <div class="footer-information">
+              <li><a href="#">Calendar</a></li>
+              <li><a href="#">Transfer Certificate</a></li>
+              <li><a href="#">Intranet</a></li>
+              <li><a href="#">Career Opportunity</a></li>
+            </div>
+          </div>
+        </div>
+        <div class="row border-top border-3 pt-3">
+           <div class="col-md-6">
+            <p class="footer-year">
+             Copyright &copy; <span id="year"></span> Apna School. All Rights Reserved.
+            </p>
+        </div>
+      
+          <div class="col-md-6">
+            <div class="footer-social-media">
+              <ul>
+                <li><a href="#"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+                <li><a href="#"><i class="fa fab fa-twitter fa-xl"></i></a></li>
+                <li><a href="#"><i class="fa fab fa-instagram fa-xl"></i></a></li>
+                <li><a href="#"><i class="fa fab fa-linkedin fa-xl"></i></a></li>
+                <li><a href="#"><i class="fa fab fa-youtube fa-xl"></i></a></li>
+              </ul>
+            </div>
+            </div>
+            <hr>
+        </div>
+      </div>
+      </footer>
+      <script>
+       var currentYear = new Date().getFullYear();
+      document.getElementById("year").innerHTML = currentYear;
+      
+      
+      
+      
+      </script>
+      
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      </body>
+      </html>

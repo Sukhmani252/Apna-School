@@ -1,20 +1,39 @@
-/*Body*/
-body{
-  text-align: center;
+h1 h2 h3 h4 h5 h6{
+  font-family: 'Merriweather', serif;
 }
 
-img{
-  width: 25%;
+p {
+  font-family: 'Source Serif 4', serif;
 }
-.row{
-  padding: 40px;
+.counts{
+  background: #f1f7fd;
+  padding: 70px 0 60px;
 }
-#main{
-  background-color: #00356B;
+.counts .count-box {
+  padding: 30px 30px 25px 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: #fff;
 }
-.icon-stats{
-  color: #286DC0;
+
+.counts .count-box i {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  background: #1977cc;
+  color: #fff;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
 }
-.icon-title{
-  color: white;
+@media (max-width:1028px){
+  .counts .count-box {
+    margin-bottom: 40px;
+  }
 }

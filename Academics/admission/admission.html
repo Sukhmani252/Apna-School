@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admissions</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header-content {
+            position: relative;
+            top: 80%;
+            left: 19px;
+            bottom: -36px;
+            transform: translate(0, -80%);
+            width: 60%;
+            height: 58px;
+            text-align: center;
+            z-index: 1;
+            padding: 0 10px;
+            background: linear-gradient(to right, rgba(33, 71, 109, 0.7), rgba(33, 71, 109, 0));
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .image-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .enquiry-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        .enquiry-form label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .enquiry-form input,
+        .enquiry-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .enquiry-form button {
+            padding: 10px 20px;
+            background-color: #00356b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .enquiry-form button:hover {
+            background-color: #286dc0;
+        }
+
+        .admission-notification {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .background-image {
+            .bg-image {
+                /* The image used */
+                background-image: url("photographer.jpg");
+
+                /* Add the blur effect */
+                filter: blur(8px);
+                -webkit-filter: blur(8px);
+
+                /* Full height */
+                height: 400px;
+
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            /* Position text in the middle of the page/image */
+            .bg-text {
+                background-color: rgb(0, 0, 0);
+                /* Fallback color */
+                background-color: rgba(0, 0, 0, 0.4);
+                /* Black w/opacity/see-through */
+                color: white;
+                font-weight: bold;
+                border: 3px solid #f1f1f1;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+            }
+        }
+
+        .fee-structure-table {
+            width: 100%;
+        }
+
+        .fee-structure-table th,
+        .fee-structure-table td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .online-payment-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #00356b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .online-payment-button:hover {
+            background-color: #286dc0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    </div>
+
+    <div class="header-content">
+        <h1>ADMISSION</h1>
+    </div>
+
+
+    <div class="container">
+        <div class="section">
+            <h2>Admissions - Procedure</h2>
+            <p>Admissions at Laurels School International are based on the following procedure:</p>
+            <ul>
+                <li>Priority of registration</li>
+                <li>Results in the Admission
+                <li>Results in the Admission Test / Interview</li>
+            </ul>
+            <p>The admission test is conducted at the level of the Annual Examination of the class preceding the one for
+                which admission is being sought.</p>
+            <p>Admission/Registration fee is non-adjustable and non-refundable.</p>
+            <p>Registration of a student does not guarantee admission in Laurels School International.</p>
+            <p>The management reserves the right to grant/reject admission without assigning any reason.</p>
+        </div>
+
+        <div class="section">
+            <h2>Documentation</h2>
+            <img src="documentation-image.jpg" alt="Documentation Image">
+            <p>Admission Form provided along with the Prospectus, must be filled in and submitted along with the
+                admission / registration fee in advance with the following documents:</p>
+            <ul>
+                <li>A copy of the birth certificate attested by a Gazetted Officer.</li>
+                <li>A copy of the Progress Report of the previous school.</li>
+                <li>The Original Transfer Certificate countersigned by the respective Education Board (once admission is
+                    confirmed).</li>
+                <li>A copy of the Aadhar Card.</li>
+            </ul>
+            <p>If a student belongs to SC, ST, or OBC, the caste certificate should be submitted at the time of
+                admission.</p>
+            <p>75% attendance is compulsory for the students seeking admission in Classes IX to XII.</p>
+        </div>
+
+        <div class="section enquiry-form">
+            <h2>Enquiry Form</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="section admission-notification">
+            <img class="bg-image background-image" src="background_image.jpg" alt="background_image">
+            <div class="bg-text">
+                <h2>Admission Notification</h2>
+                <h1 style="font-size:50px">Lorem ipsum dolor sit, amet </h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat quaerat, saepe totam praesentium
+                    harum quia assumenda perspiciatis explicabo. Unde quasi velit iure corporis nisi ducimus nesciunt ad
+                    facere totam libero.
+
+
+
+            </div>
+        </div>
+
+
+        <div class="section">
+            <h2>Fee Structure</h2>
+            <table class="fee-structure-table">
+                <tr>
+                    <th>Grade</th>
+                    <th>Annual Fee</th>
+                    <th>Tuition Fee</th>
+                </tr>
+                <tr>
+                    <td>Nursery</td>
+                    <td>$1000</td>
+                    <td>$500/month</td>
+                </tr>
+                <tr>
+                    <td>KG I to Class V</td>
+                    <td>Rs. 12,000</td>
+                    <td>Rs. 2,500</td>
+                </tr>
+                <tr>
+                    <td>Class VI to VIII</td>
+                    <td>Rs. 15,000</td>
+                    <td>Rs. 3,000</td>
+                </tr>
+                <tr>
+                    <td>Class IX to X</td>
+                    <td>Rs. 18,000</td>
+                    <td>Rs. 3,500</td>
+                </tr>
+                <tr>
+                    <td>Class XI to XII</td>
+                    <td>Rs. 20,000</td>
+                    <td>Rs. 4,000</td>
+                </tr>
+                <!-- Add more rows for other grades -->
+            </table>
+        </div>
+
+        <div class="section online-payment">
+            <h2>Online School Fees Payment</h2>
+            <a href="#" class="online-payment-button">Pay Now</a>
+        </div>
+    </div>
+</body>
+
+</html>

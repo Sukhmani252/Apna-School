@@ -1,61 +1,107 @@
+h1 h2 h3 h4 h5 h6{
+  font-family: 'Merriweather', serif;
+
+}
+p{
+  font-family: 'Source Serif 4', serif;
+
+}
+
 /*Navbar*/
-
-#header{
-  margin-bottom: 40px;
+#navbar {
+background-color: white;
+width: 100%;
 }
 
-/*Header-image*/
-.image-head{
-  width: 98%;
+.dropdown {
+position: relative;
+display: inline-block;
 }
 
-/*Main Content*/
+.dropbtn {
+background-color: inherit;
+color: black;
+padding: 10px;
+font-size: 16px;
+border: none;
+cursor: pointer;
+}
+
+.dropbtn:hover{
+background-color: #286dc0;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
 
 #main-content{
   margin-top: 40px;
+  margin-bottom: 40px;
 }
-.list-group{
-padding-left: 250px;
-padding-right: 250px;
-line-height: 50px;
 
-}
-.main-link{
-  font-family: "Montserrat-bold";
-  font-size: 1.5rem;
-  color:  #00356B;
-}
-.Advisory{
-  padding-right: 50px;
-
-}
 .Advisory-title{
-  font-family: "Montserrat-bold";
-  color:  #00356B;
-  font-size: 3.5rem;
-
+font-family: 'Merriweather',serif;
 }
 
+/*Main Content*/
+.advisory-head{
+  margin-top: 40px;
+  color: #00356b;
+  font-family: 'Merriweather', serif;
+}
+.advisory-head-image{
+  width: 10%;
+  float: left;
+  box-sizing: border-box;
+  margin-right: 30px;
+}
+.table-title{
+  float: none;
+  text-align: left;
+  margin-top: 150px;
+  color: #00356b;
+  font-family: 'Merriweather', serif;
+}
 .Advisory-content{
-  font-family: "Montserrat-light";
-  color: #286DC0;
-  font-size: 1.2rem;
+  color: #286dc0;
+  font-family: 'Source Serif 4', serif;
 }
-.Advisory-last{
-  font-family: "Montserrat-bold";
-  color:  #00356B;
+.advisory-head-desc{
+  color: #286dc0;
 }
 
-.Advisory-desc{
-  font-family: "Montserrat-light";
-  color: #286DC0;
+.year-filter{
+  margin-top: 40px;
 }
+.table{
+  font-family: 'Merriweather', serif;
+  color: #00356b;
+}
+
 
 /*footer*/
 .footer {
       background-color: #222222;
       color: white;
       padding: 50px 0;
+      margin-top: 40px;
     }
     .footer-contact p{
       font-family: 'Poppins', sans-serif;
@@ -133,54 +179,3 @@ line-height: 50px;
     .footer-social-media ul li a {
       color: white;
     }
-/*making mobile friendly*/
-@media(max-width:1028px)
-{
-
-  .navbar-brand{
-    font-size:1rem;
-    }
-
-    .nav-link{
-      font-size: 2.6rem;
-    }
-
-    .col-lg-4{
-      font-size: 1rem;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      padding-left: auto;
-      padding-right: auto;
-    }
-    .btn btn-outline-light btn-lg{
-      display: block;
-      padding-left: auto;
-      padding-right: auto;
-    }
-  .copy{
-      text-align:  center;
-      margin-top: 40px;
-      font-size: 1rem;
-    }
-    .Advisory-title{
-      font-size: 1.5rem;
-    }
-    .Advisory-content{
-      font-size: 1rem;
-    }
-
-    .list-group{
-    padding-left: 0;
-    padding-right: 0px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-    }
-    .main-link{
-
-      font-size: 1rem;
-
-    }
-
-
-}

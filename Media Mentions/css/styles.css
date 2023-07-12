@@ -1,6 +1,55 @@
+.heading{
+  font-family: 'Merriweather', serif;
+  color: #00356b;
+}
+.para{
+  font-family: 'Source Serif 4', serif;
+  color: #286dc0;
+}
+
 /*Navbar*/
+#navbar {
+background-color: white;
+width: 100%;
+}
 
+.dropdown {
+position: relative;
+display: inline-block;
+}
 
+.dropbtn {
+background-color: inherit;
+color: black;
+padding: 10px;
+font-size: 16px;
+border: none;
+cursor: pointer;
+}
+
+.dropbtn:hover{
+background-color: #286dc0;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
 
 /*main*/
 
@@ -52,6 +101,7 @@
           background-color: #222222;
           color: white;
           padding: 50px 0;
+          margin-top: 40px;
         }
         .footer-contact p{
           font-family: 'Poppins', sans-serif;
@@ -129,43 +179,3 @@
         .footer-social-media ul li a {
           color: white;
         }
-
-
-/*making mobile friendly*/
-@media(max-width:1028px)
-{
-  .main-image{
-    width: 100%;
-  }
-
-  .navbar-brand{
-    font-size:1rem;
-    }
-
-    .nav-link{
-      font-size: 2.6rem;
-    }
-
-    .col-lg-4{
-      font-size: 1rem;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      padding-left: auto;
-      padding-right: auto;
-    }
-
-
-
-
-    .btn btn-outline-light btn-lg{
-      display: block;
-      padding-left: auto;
-      padding-right: auto;
-    }
-
-    .copy{
-      text-align:  center;
-      margin-top: 40px;
-      font-size: 1rem;
-    }
-}
