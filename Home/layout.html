@@ -58,7 +58,35 @@
 
 /* slideshow */
 
+#carouselExampleIndicators {
+      height: 70vh;
+      margin-bottom: 20px;
+    }
 
+    .carousel-inner {
+      height: 100%;
+    }
+
+    .carousel-item img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Mobile responsiveness using media queries */
+    @media screen and (max-width: 767px) {
+      /* Adjust styles for screens smaller than 768px (mobile devices) */
+      #carouselExampleIndicators {
+        height: 40vh; 
+      }
+
+      .carousel-inner {
+        height: 40vh; 
+      }
+
+      .carousel-item img {
+        max-height: 40vh; 
+      }
+    }
 /* Notice board */
 
 .bigbox{
@@ -141,6 +169,59 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
+
+@media screen and (max-width: 767px) {
+    
+      .quote {
+        margin-top: 0; 
+        margin-bottom: 20px; 
+      }
+
+      .notice-board {
+        height: auto;
+        padding: auto;
+      }
+      .notice-board h2{
+        text-align: center;
+      }
+    }
+
+    /*scrolling-text*/
+    .scrolling-text {
+      background-color: #00356b;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      font-family: 'Cooper Black', sans-serif;
+      font-size: 24px;
+      white-space: nowrap;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    .scrolling-text span {
+      display: inline-block;
+      animation: marquee 10s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* Mobile responsiveness using media queries */
+    @media screen and (max-width: 767px) {
+      /* Adjust styles for screens smaller than 768px (mobile devices) */
+      .scrolling-text {
+        margin-top: 20px;
+        font-size: 20px;
+      }
+    }
+
 /* layout */
 
         .bg {
@@ -334,7 +415,11 @@
         .dropdown-button{
             color: #286DC0;
         }
-
+        @media screen and (max-width: 767px) {
+          .bg{
+            display: none;
+          }
+        }
 
 
         .footer {
@@ -342,6 +427,25 @@
       color: white;
       padding: 50px 0;
     }
+
+    .footer p {
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer h4 {
+  color: #63aaff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
     .footer-contact p{
       font-family: 'Poppins', sans-serif;
       font-weight: 300;
@@ -419,7 +523,47 @@
       color: white;
     }
 
+    @media screen and (max-width: 767px) {
+  /* Center the content within the columns */
+  .footer .container .row {
+    justify-content: center;
+    text-align: center;
+  }
 
+  /* Adjust spacing for smaller screens */
+  .footer-contact,
+  .footer-quick-links,
+  .footer-information,
+  .footer-social-media {
+    margin-bottom: 20px;
+  }
+
+  .footer-quick-links,
+  .footer-information {
+    line-height: 1.6;
+  }
+
+  .footer-social-media ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    text-align: center; /* Center the social media links */
+  }
+
+  .footer-social-media {
+    margin-top: 20px; /* Add space above social media icons */
+  }
+
+  .footer-social-media ul li {
+    display: inline-block; /* Display the links in a line */
+    margin-right: 10px; /* Add spacing between each link */
+  }
+  
+  /* Add space between map and contact us heading */
+  .footer .col-md-3 {
+    margin-bottom: 20px;
+  }
+}
 
     </style>
 </head>
@@ -583,13 +727,13 @@
           </tr>
           </table>
 
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height: 70vh;">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
-            <div class="carousel-inner" style="height: 100%;">
+            <div class="carousel-inner">
               <div class="carousel-item active">
                 <img class="d-block w-100" src="little.jpg" alt="First slide">
               </div>
@@ -631,9 +775,9 @@
           </div>
 
 
-          <marquee style="margin-bottom: 80px;" bgcolor="00356b" scrollamount="10" behavior="alternate" direction="both" width="1600" height="150" <center>
-            <center><font face="cooper black" color="white" size="6" alignment="centre">APNA SCHOOL</font>
-            </marquee>
+          <div class="scrolling-text">
+            <span>APNA SCHOOL - APNA SCHOOL - APNA SCHOOL </span>
+          </div>
 
 
           <section class="counts">

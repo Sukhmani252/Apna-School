@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>School Policies</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
@@ -104,6 +106,22 @@
       padding: 10px 20px;
     }
 
+    @media (max-width: 768px) {
+  .header{
+    height: 30vh;
+  }
+  .header-content {
+    width: 100%; /* Full width for mobile devices */
+    top: 50%; /* Adjust the position for better centering */
+    transform: translate(0, -50%);
+  }
+  
+  .header h1 {
+    font-size: 2rem; /* Adjust the font size for mobile devices */
+  }
+}
+
+
     .policy {
       margin-bottom: 30px;
       text-align: center;
@@ -125,11 +143,44 @@
       background-color: darkgray;
     }
 
+    @media only screen and (max-width: 768px) {
+
+  .policy{
+      margin: 0;
+    }
+  .policy a {
+    padding: 8px 0px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Decrease font size for smaller screens */
+  }
+  .policy a:hover {
+      background-color: darkgray;
+    }
+}
+
     .footer {
       background-color: #222222;
       color: white;
       padding: 50px 0;
     }
+
+    .footer p {
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer h4 {
+  color: #63aaff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
     .footer-contact p{
       font-family: 'Poppins', sans-serif;
       font-weight: 300;
@@ -157,7 +208,7 @@
       margin-bottom: 50px;
       line-height: 2;
     }
-    .footer h4{ 
+    .footer h4{
       color: #63aaff;
       font-family: 'Poppins', sans-serif;
     }
@@ -177,7 +228,7 @@
 
     }
 
-    
+
     .footer-information li {
       list-style: none;
       margin-bottom: 5px;
@@ -191,7 +242,7 @@
     .footer-social-media {
       margin-bottom: 20px;
       text-align: right;
-    
+
     }
 
     .footer-social-media ul {
@@ -206,6 +257,48 @@
     .footer-social-media ul li a {
       color: white;
     }
+
+    @media screen and (max-width: 767px) {
+  /* Center the content within the columns */
+  .footer .container .row {
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Adjust spacing for smaller screens */
+  .footer-contact,
+  .footer-quick-links,
+  .footer-information,
+  .footer-social-media {
+    margin-bottom: 20px;
+  }
+
+  .footer-quick-links,
+  .footer-information {
+    line-height: 1.6;
+  }
+
+  .footer-social-media ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    text-align: center; /* Center the social media links */
+  }
+
+  .footer-social-media {
+    margin-top: 20px; /* Add space above social media icons */
+  }
+
+  .footer-social-media ul li {
+    display: inline-block; /* Display the links in a line */
+    margin-right: 10px; /* Add spacing between each link */
+  }
+  
+  /* Add space between map and contact us heading */
+  .footer .col-md-3 {
+    margin-bottom: 20px;
+  }
+}
     
   </style>
 </head>

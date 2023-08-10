@@ -54,63 +54,76 @@
   display: block;
 }
     /* Custom styles for the page */
-    h2,h1{
-      font-family: 'Merriweather', serif;
-      font-size: 26px;
-      font-weight: 500;
-      color: #286dc0;
-    }
-    
-    /* p,li{
-      font-family: 'Source Serif Pro',serif;
-    } */
+    h2, h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: #286dc0;
+}
 
-    .size{
-      min-width: 1400px;
-    }
+.size {
+  min-width: 1400px; /* Remove this if not required */
+  text-align: justify;
+}
 
-    .header {
-      position: relative;
-      height: 400px;
-      overflow: hidden;
-    }
+.header {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
 
-    .header-image {
-      width: 100%;
-      object-fit: cover;
-      filter: brightness(70%);
-    }
+.header-image {
+  width: 100%;
+  background-image: url("../Images/admission3.jpg");
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(70%);
+}
 
-    .header-content {
-      position: absolute;
-      top: 80%;
-      left: 0;
-      transform: translate(0, -80%);
-      width: 50%;
-      text-align: center;
-      /* z-index: 1; */
-      padding: 0 10px;
-      background: linear-gradient(to right, rgba(33, 71, 109, 0.7), rgba(33, 71, 109, 0));
-    }
+.header-content {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  transform: translate(0, -80%);
+  width: 50%;
+  text-align: center;
+  padding: 0 10px;
+  background: linear-gradient(to right, rgba(33, 71, 109, 0.7), rgba(33, 71, 109, 0));
+}
 
-    .header h1 {
-      font-family: "Merriweather", serif;
-      font-size: 3rem;
-      font-weight: bold;
-      color: #fff;
-      padding: 10px 20px;
-    }
+.header h1 {
+  font-family: "Merriweather", serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 20px;
+}
 
+/* Media Query for mobile devices */
+@media (max-width: 768px) {
+  .header{
+    height: 30vh;
+  }
+  .header-content {
+    width: 100%; /* Full width for mobile devices */
+    top: 50%; /* Adjust the position for better centering */
+    transform: translate(0, -50%);
+  }
+  
+  .header h1 {
+    font-size: 2rem; /* Adjust the font size for mobile devices */
+  }
+}
 
-    .resources-heading {
+  
+    .resources-heading h2{
       background: #00356b;
-      padding: 10px 10px 10px 100px;
       font-size: 24px;
       border-radius: 0;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .resources-heading h2{
       color: #fff;
+      padding: 10px 10px 10px 100px;
     }
 
 
@@ -172,9 +185,12 @@
      
     }
     .best-practices-section h2{
+      background: #00356b;
+      font-size: 24px;
+      border-radius: 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       color: #fff;
       padding: 10px 10px 10px 100px;
-      background: #00356b;
     }
 
     .footer {
@@ -182,6 +198,25 @@
       color: white;
       padding: 50px 0;
     }
+
+    .footer p {
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer h4 {
+  color: #63aaff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
     .footer-contact p{
       font-family: 'Poppins', sans-serif;
       font-weight: 300;
@@ -209,7 +244,7 @@
       margin-bottom: 50px;
       line-height: 2;
     }
-    .footer h4{ 
+    .footer h4{
       color: #63aaff;
       font-family: 'Poppins', sans-serif;
     }
@@ -229,7 +264,7 @@
 
     }
 
-    
+
     .footer-information li {
       list-style: none;
       margin-bottom: 5px;
@@ -243,7 +278,7 @@
     .footer-social-media {
       margin-bottom: 20px;
       text-align: right;
-    
+
     }
 
     .footer-social-media ul {
@@ -258,33 +293,122 @@
     .footer-social-media ul li a {
       color: white;
     }
-    
 
-    @media (max-width: 576px) {
-      .teachers-corner-heading {
-        font-size: 28px;
-        margin-top: 20px;
-        margin-bottom: 40px;
-      }
+    @media screen and (max-width: 767px) {
+  /* Center the content within the columns */
+  .footer .container .row {
+    justify-content: center;
+    text-align: center;
+  }
 
-      .resources-heading {
-        font-size: 20px;
-      }
+  /* Adjust spacing for smaller screens */
+  .footer-contact,
+  .footer-quick-links,
+  .footer-information,
+  .footer-social-media {
+    margin-bottom: 20px;
+  }
 
-      .blogs-section h3 {
-        font-size: 20px;
-      }
+  .footer-quick-links,
+  .footer-information {
+    line-height: 1.6;
+  }
 
-      .best-practices-section {
-        margin-top: 20px;
-        padding: 15px;
-      }
+  .footer-social-media ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    text-align: center; /* Center the social media links */
+  }
 
-      .container{
-        min-width: 100%;
-      }
-    
-    }
+  .footer-social-media {
+    margin-top: 20px; /* Add space above social media icons */
+  }
+
+  .footer-social-media ul li {
+    display: inline-block; /* Display the links in a line */
+    margin-right: 10px; /* Add spacing between each link */
+  }
+  
+  /* Add space between map and contact us heading */
+  .footer .col-md-3 {
+    margin-bottom: 20px;
+  }
+}
+   @media (max-width: 768px) {
+
+  .resources-heading {
+    padding: 10px;
+    font-size: 20px;
+  }
+
+ 
+
+  .best-practices-section h2 {
+    padding: 10px;
+  }
+
+  /* Adjust the font size and padding for paragraphs */
+  .content p {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  /* Adjust the font size for list items */
+  .content ul li {
+    font-size: 14px;
+  }
+
+  /* Adjust the font size and padding for blog links */
+  .blog-link h4 {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  
+  .size{
+    min-width: 100%;
+  }
+  
+
+  /* Adjust the font size and padding for development-section */
+  .development-section {
+    font-size: 14px;
+  }
+  .development-section  h2{
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  /* Adjust the font size for useful links */
+  .development-section ul li {
+    font-size: 12px;
+  }
+
+  /* Adjust the font size and padding for announcements */
+  .blogs-section {
+    padding: 10px;
+  }
+
+  .blogs-section h2 {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  /* Adjust the font size for blog links */
+  .blog-link h4 {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  .blog-link p {
+    font-size: 14px;
+  }
+  h2{
+    text-align: center;
+  }
+
+}
   </style>
   <title>Student's Corner</title>
 </head>
@@ -446,16 +570,16 @@
           </table>
   
       
-  <div class="container-fluid p-0">
-    <div class="row">
-      <div class="col-md-12 header">
-        <img src="../Images/admission3.jpg" class="header-image" alt="Header Image">
-        <div class="header-content">
-          <h1>Student's Corner</h1>
-        </div>
-      </div>
-    </div>
-  </div>
+          <div class="container-fluid p-0">
+            <div class="row">
+              <div class="col-md-12 header">
+                <div class="header-image"></div> 
+                <div class="header-content">
+                  <h1>Student's Corner</h1>
+                </div>
+              </div>
+            </div>
+          </div>
          
     <section class="p-5 container size">
       <p>
@@ -490,48 +614,50 @@
       </div>
     </div>
 
-  
-    <div class="row container size px-5">
-      <div class="px-5 col-md-8">
-        <div class="development-section px-4">
-          <h2>Some useful links</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dapibus tellus, sed consectetur nisi. Proin
-            vestibulum neque enim, id egestas sem lacinia at. Aliquam erat volutpat. Mauris id mi non purus tincidunt
-            rhoncus, egestas odio. Fusce faucibus, nisi eu accumsan consequat.
-          </p>
-          <p>
-            Explore some useful links:
-          </p>
-          <ul>
-            <li>Link 1</li>
-            <li>Link 2</li>
-            <li>Link 3</li>
-            <li>Link 4</li>
-          </ul>
+    <div class="container size px-5">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="development-section px-4">
+            <h2>Some useful links</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dapibus tellus, sed consectetur nisi. Proin
+              vestibulum neque enim, id egestas sem lacinia at. Aliquam erat volutpat. Mauris id mi non purus tincidunt
+              rhoncus, egestas odio. Fusce faucibus, nisi eu accumsan consequat.
+            </p>
+            <p>
+              Explore some useful links:
+            </p>
+            <ul>
+              <li>Link 1</li>
+              <li>Link 2</li>
+              <li>Link 3</li>
+              <li>Link 4</li>
+            </ul>
+          </div>
         </div>
-      </div>
-
-     
-  
-      <div class="col-md-4">
-        <div class="blogs-section">
-          <h2></i>Announcements</h2>
-          <div class="blog-link line">
-            <h4>Title 1</h4>
-            <p>Summary of the announcement</p>
-          </div>
-          <div class="blog-link line">
-            <h4>Title 2</h4>
-            <p>Summary of the announcement</p>
-          </div>
-          <div class="blog-link">
-            <h4>Title 3</h4>
-            <p>Summary of the announcement</p>
+    
+        <div class="col-md-4">
+          <div class="blogs-section">
+            <h2>Announcements</h2>
+            <div class="blog-link line">
+              <h4>Blog Title 1</h4>
+              <p>Summary of the announcement</p>
+            </div>
+            <div class="blog-link line">
+              <h4>Blog Title 2</h4>
+              <p>Summary of the announcement</p>
+            </div>
+            <div class="blog-link">
+              <h4>Blog Title 3</h4>
+              <p>Summary of the announcement</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+
+    
     <div class="row">
       <div class="best-practices-section col-12 ">
         <h2>Academic Work</h2>
@@ -546,49 +672,47 @@
  
 </div>
       
-    <div class="row container size ml-5 px-4">
-      <div class=" col-md-6">
-        <div class="blogs-section">
-          <h2>Class Schedules</h2>
-          <div class="blog-link line">
-            <h4>Title 1</h4>
-            <p>Summary </p>
-          </div>
-          <div class="blog-link line">
-            <h4>Title 2</h4>
-            <p>Summary</p>
-          </div>
-          <div class="blog-link">
-            <h4>Title 3</h4>
-            <p>Summary</p>
-          </div>
+<div class="container size px-4">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="blogs-section">
+        <h2>Class Schedules</h2>
+        <div class="blog-link line">
+          <h4>Title 1</h4>
+          <p>Summary</p>
         </div>
-      </div>
-  
-      <div class="col-md-6 ">
-        <div class="blogs-section">
-          <h2>Homework and Assignments</h2>
-          <div class="blog-link line">
-            <h4>Title 1</h4>
-            <p>Summary </p>
-          </div>
-          <div class="blog-link line">
-            <h4>Title 2</h4>
-            <p>Summary</p>
-          </div>
-          <div class="blog-link">
-            <h4>Title 3</h4>
-            <p>Summary</p>
-          </div>
+        <div class="blog-link line">
+          <h4>Title 2</h4>
+          <p>Summary</p>
+        </div>
+        <div class="blog-link">
+          <h4>Title 3</h4>
+          <p>Summary</p>
         </div>
       </div>
     </div>
 
-   
-  </div>
-  </div>
+    <div class="col-md-6">
+      <div class="blogs-section">
+        <h2>Homework and Assignments</h2>
+        <div class="blog-link line">
+          <h4>Title 1</h4>
+          <p>Summary</p>
+        </div>
+        <div class="blog-link line">
+          <h4>Title 2</h4>
+          <p>Summary</p>
+        </div>
+        <div class="blog-link">
+          <h4>Title 3</h4>
+          <p>Summary</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+
 <footer class="footer">
   <div class="container">
     <div class="row">

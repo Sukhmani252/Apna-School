@@ -98,19 +98,58 @@
     color: #333;
     margin-left: 200px;
     max-width: 450px;
+    text-align: justify;
 }
+
+@media screen and (max-width: 767px) {
+  .image-container {
+    flex-direction: column; 
+    height: auto;
+  }
+
+  .heading-container {
+    width: 100%; 
+    max-width: 90%; 
+    margin: 0 auto;
+  }
+  .heading-container h1{
+    margin-left: 0;
+    max-width: 100%;
+  }
+  .heading-container p{
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .container{
+    padding: 0 20px;
+  }
+  .section-title{
+    text-align: center;
+  }
+
+}
+
 
     .bg{
       background: #00356b;
       margin-bottom: 40px;
       font-family: 'Merriweather', serif;
+      text-align: justify;
     }
 
     .section-title {
       /* margin-top: 60px; */
       margin-bottom: 30px;
     }
-
+.career-option{
+  text-align: justify;
+}
     .card {
       border: none;
       background-color: #fff;
@@ -119,6 +158,7 @@
       border-radius: 0;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
       font-family: 'Merriweather', serif;
+      text-align: justify;
     }
 
     .card-title {
@@ -147,6 +187,25 @@
       color: white;
       padding: 50px 0;
     }
+
+    .footer p {
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer h4 {
+  color: #63aaff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
     .footer-contact p{
       font-family: 'Poppins', sans-serif;
       font-weight: 300;
@@ -174,7 +233,7 @@
       margin-bottom: 50px;
       line-height: 2;
     }
-    .footer h4{ 
+    .footer h4{
       color: #63aaff;
       font-family: 'Poppins', sans-serif;
     }
@@ -194,7 +253,7 @@
 
     }
 
-    
+
     .footer-information li {
       list-style: none;
       margin-bottom: 5px;
@@ -208,7 +267,7 @@
     .footer-social-media {
       margin-bottom: 20px;
       text-align: right;
-    
+
     }
 
     .footer-social-media ul {
@@ -223,7 +282,48 @@
     .footer-social-media ul li a {
       color: white;
     }
-    
+
+    @media screen and (max-width: 767px) {
+  /* Center the content within the columns */
+  .footer .container .row {
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Adjust spacing for smaller screens */
+  .footer-contact,
+  .footer-quick-links,
+  .footer-information,
+  .footer-social-media {
+    margin-bottom: 20px;
+  }
+
+  .footer-quick-links,
+  .footer-information {
+    line-height: 1.6;
+  }
+
+  .footer-social-media ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    text-align: center; /* Center the social media links */
+  }
+
+  .footer-social-media {
+    margin-top: 20px; /* Add space above social media icons */
+  }
+
+  .footer-social-media ul li {
+    display: inline-block; /* Display the links in a line */
+    margin-right: 10px; /* Add spacing between each link */
+  }
+  
+  /* Add space between map and contact us heading */
+  .footer .col-md-3 {
+    margin-bottom: 20px;
+  }
+}
   </style>
 </head>
 <body>
@@ -401,7 +501,7 @@
         <h1 class="section-title">Career Options</h1>
       </div>
     </div>
-    <div class="row">
+    <div class="row career-option">
       <div class="col-md-12 mb-3" style="  font-family: 'Merriweather', serif">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem omnis perferendis ex delectus cumque beatae maxime totam voluptatem iste odio, exercitationem amet assumenda accusamus saepe rerum, animi dignissimos! Iusto quibusdam deserunt suscipit iure, perspiciatis libero earum rem qui error autem rerum voluptates quas, amet cumque ab eius vel fugit maxime laudantium voluptas! Repudiandae nisi cupiditate consequuntur, ullam impedit temporibus a voluptate quo ea totam corrupti soluta odit incidunt mollitia, in atque facere aliquid iusto expedita distinctio dignissimos vero quibusdam. Repellat facilis dolore soluta accusamus molestias aliquam, similique quibusdam, molestiae distinctio incidunt autem consequuntur iure dolores fugit. Nobis cumque beatae est accusantium atque laboriosam distinctio iure recusandae nostrum iusto nam explicabo, impedit placeat iste repellendus? Nemo corporis asperiores, odit soluta at maiores. Accusantium minus voluptas, nihil, numquam quis, iure ratione aut debitis quasi ipsam minima impedit beatae sit vero. Veritatis minus nobis quaerat dolorem dolores. Cum laborum ipsum mollitia blanditiis voluptatum?</p>
 

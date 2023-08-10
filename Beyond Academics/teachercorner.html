@@ -62,6 +62,7 @@ background-color: #286dc0;
 
     .size{
       min-width: 1400px;
+      text-align: justify;
     } 
     .header {
       position: relative;
@@ -95,15 +96,31 @@ background-color: #286dc0;
       padding: 10px 20px;
     }
 
-    .resources-heading {
+
+/* Media Query for mobile devices */
+@media (max-width: 768px) {
+  .header{
+    height: 30vh;
+  }
+  .header-content {
+    width: 100%; /* Full width for mobile devices */
+    top: 50%; /* Adjust the position for better centering */
+    transform: translate(0, -50%);
+  }
+  
+  .header h1 {
+    font-size: 2rem; /* Adjust the font size for mobile devices */
+  }
+}
+
+    
+    .resources-heading h2{
+      color: #fff;
       background: #00356b;
       padding: 10px 10px 10px 100px;
       font-size: 24px;
       border-radius: 0;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .resources-heading h2{
-      color: #fff;
     }
 
     .content {
@@ -112,25 +129,26 @@ background-color: #286dc0;
       font-family: 'Source Serif Pro',serif;
     }
 
-    .development-section {
-      background: #fff;
-      padding: 20px 10px;
-     border-top: 3px solid #286dc0;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      height: 300px;
-      font-family: 'Source Serif Pro',serif;
-    }
+   
+  .development-section {
+  background: #fff;
+  padding: 20px;
+  border-top: 3px solid #286dc0;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Source Serif Pro', serif;
+  height: 300px;
+}
 
-    .blogs-section {
-    padding: 20px 10px;
-    background: #ffffff;
-    border-top: 3px solid #286dc0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    height: 300px;
-    font-family: 'Source Serif Pro',serif;
-  }
+.blogs-section {
+  padding: 20px;
+  background: #ffffff;
+  border-top: 3px solid #286dc0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  font-family: 'Source Serif Pro', serif;
+  height: 300px;
+}
 
   
 
@@ -167,16 +185,38 @@ background-color: #286dc0;
     }
     .best-practices-section h2{
       color: #fff;
-      padding: 10px 10px 10px 100px;
       background: #00356b;
-      font-family: 'Source Serif Pro',serif;
+      padding: 10px 10px 10px 100px;
+      font-size: 24px;
+      border-radius: 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
+   
     .footer {
       background-color: #222222;
       color: white;
       padding: 50px 0;
     }
+
+    .footer p {
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer h4 {
+  color: #63aaff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
     .footer-contact p{
       font-family: 'Poppins', sans-serif;
       font-weight: 300;
@@ -204,7 +244,7 @@ background-color: #286dc0;
       margin-bottom: 50px;
       line-height: 2;
     }
-    .footer h4{ 
+    .footer h4{
       color: #63aaff;
       font-family: 'Poppins', sans-serif;
     }
@@ -224,7 +264,7 @@ background-color: #286dc0;
 
     }
 
-    
+
     .footer-information li {
       list-style: none;
       margin-bottom: 5px;
@@ -238,7 +278,7 @@ background-color: #286dc0;
     .footer-social-media {
       margin-bottom: 20px;
       text-align: right;
-    
+
     }
 
     .footer-social-media ul {
@@ -253,32 +293,109 @@ background-color: #286dc0;
     .footer-social-media ul li a {
       color: white;
     }
+
+    @media screen and (max-width: 767px) {
+  /* Center the content within the columns */
+  .footer .container .row {
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Adjust spacing for smaller screens */
+  .footer-contact,
+  .footer-quick-links,
+  .footer-information,
+  .footer-social-media {
+    margin-bottom: 20px;
+  }
+
+  .footer-quick-links,
+  .footer-information {
+    line-height: 1.6;
+  }
+
+  .footer-social-media ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    text-align: center; /* Center the social media links */
+  }
+
+  .footer-social-media {
+    margin-top: 20px; /* Add space above social media icons */
+  }
+
+  .footer-social-media ul li {
+    display: inline-block; /* Display the links in a line */
+    margin-right: 10px; /* Add spacing between each link */
+  }
+  
+  /* Add space between map and contact us heading */
+  .footer .col-md-3 {
+    margin-bottom: 20px;
+  }
+}
+
+
+  @media (max-width: 767px) {
+
+    .container {
+    min-width: 100%; 
+  }
+  .resources-heading h2 {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .content {
+    padding: 0; 
+  }
+
+  .best-practices-section h2 {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .development-section {
+    margin-bottom: 20px;
+   padding: 20px 0; 
+    font-size: 14px;
+    height: auto;
+  }
+  .development-section h2 {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  
+
+  /* Adjust the font size and padding for announcements */
+  .blogs-section {
+    padding: 10px;
+  }
+
+  .blogs-section h2 {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  /* Adjust the font size for blog links */
+  .blog-link h4 {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  .blog-link p {
+    font-size: 14px;
+  }
+
+ 
+  
+}
+   
     
-    @media (max-width: 576px) {
-      .teachers-corner-heading {
-        font-size: 28px;
-        margin-top: 20px;
-        margin-bottom: 40px;
-      }
-
-      .resources-heading {
-        font-size: 20px;
-      }
-
-      .blogs-section h3 {
-        font-size: 20px;
-      }
-
-      .best-practices-section {
-        margin-top: 20px;
-        padding: 15px;
-      }
-
-      .container{
-        min-width: 100%;
-      }
-    
-    }
   </style>
   <title>Teacher's Corner</title>
 </head>
@@ -483,40 +600,42 @@ background-color: #286dc0;
       </div>
     </div>
   
-    <div class="row container size px-5">
-      <div class="px-5 col-md-8">
-        <div class="development-section px-4">
-          <h2> Professional Development</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dapibus tellus, sed consectetur nisi. Proin
-            vestibulum neque enim, id egestas sem lacinia at. Aliquam erat volutpat. Mauris id mi non purus tincidunt
-            rhoncus, egestas odio. Fusce faucibus, nisi eu accumsan consequat.
-          </p>
-          <p>
-            Explore our professional development opportunities:
-          </p>
-          <ul>
-            <li>Opportunity 1</li>
-            <li>Opportunity 2</li>
-            <li>Opportunity 3</li>
-          </ul>
+    <div class="container size px-5">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="development-section px-4">
+            <h2>Professional Development</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dapibus tellus, sed consectetur nisi. Proin
+              vestibulum neque enim, id egestas sem lacinia at. Aliquam erat volutpat. Mauris id mi non purus tincidunt
+              rhoncus, egestas odio. Fusce faucibus, nisi eu accumsan consequat.
+            </p>
+            <p>
+              Explore our professional development opportunities:
+            </p>
+            <ul>
+              <li>Opportunity 1</li>
+              <li>Opportunity 2</li>
+              <li>Opportunity 3</li>
+            </ul>
+          </div>
         </div>
-      </div>
-  
-      <div class="col-md-4">
-        <div class="blogs-section">
-          <h2> Blogs for Teachers</h2>
-          <div class="blog-link line">
-            <h4>Blog Title 1</h4>
-            <p>Summary of the blog post</p>
-          </div>
-          <div class="blog-link line">
-            <h4>Blog Title 2</h4>
-            <p>Summary of the blog post</p>
-          </div>
-          <div class="blog-link">
-            <h4>Blog Title 3</h4>
-            <p>Summary of the blog post</p>
+    
+        <div class="col-md-4">
+          <div class="blogs-section">
+            <h2>Blogs for Teachers</h2>
+            <div class="blog-link line">
+              <h4>Blog Title 1</h4>
+              <p>Summary of the blog post</p>
+            </div>
+            <div class="blog-link line">
+              <h4>Blog Title 2</h4>
+              <p>Summary of the blog post</p>
+            </div>
+            <div class="blog-link">
+              <h4>Blog Title 3</h4>
+              <p>Summary of the blog post</p>
+            </div>
           </div>
         </div>
       </div>
